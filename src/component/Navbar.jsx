@@ -3,10 +3,10 @@ import Home from './Home'
 const Navbar = () => {
     const items = ["Tutti i film", "Offerte e Promozioni", "Dove siamo"]
     return(
-        <header className="navbar">
+        <header className="container text-center d-flex">
             <Home />
             {items.map((i) => {
-                return <div className='navbarItem'>{i}</div>
+                return <div className='navbar__item'>{i}</div>
             })}
         </header>
     )
