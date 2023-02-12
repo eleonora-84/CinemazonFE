@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel from './component/Carousel';
+import Mycarousel from "./component/Mycarousel";
 
 import Navbar from "./component/Navbar"
 import SkinTop from "./component/SkinTop"
@@ -11,7 +11,7 @@ function App() {
     <>
     <SkinTop />
     <Navbar />
-    <Carousel />
+    <Mycarousel />
     </>
     
   )
