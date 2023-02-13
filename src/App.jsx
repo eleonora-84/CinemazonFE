@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import AllMovies from "./component/AllMovies";
+import Home from "./component/Home";
 import Mycarousel from "./component/Mycarousel";
 
 import Navbar from "./component/Navbar"
@@ -13,6 +14,7 @@ function App() {
     <>
     <SkinTop />
     <Navbar />
+    <Home />
     <AllMovies />
     
     </>

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Showtime';
+    src: local('Shotime'), url(../assets/fonts/Showtime.ttf) format('truetype');
+}
+
+.home{
+    font-family: 'Showtime';
+    text-align: center;
+}
+.hello, .lover{
+    font-size: 5rem;
+    color:#03B5AA;
+}
+.movie{
+    font-size: 8rem;
+    
+}

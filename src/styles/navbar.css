@@ -2,15 +2,15 @@
     font-family: 'Diavlo';
     src: local('Diavlo'), url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf) format('truetype');
   }
-/* 
+ 
 .navbar__main {
     display: flex;
     align-items: center;
     font-family: 'Diavlo', serif;
     width: 75%;
-} */
+} 
 
-.home {
+.logo {
     margin-right: auto;
     font-size: 150%;
     padding: 20px 30px;

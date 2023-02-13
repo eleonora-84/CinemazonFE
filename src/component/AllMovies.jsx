@@ -7,11 +7,7 @@ const AllMovies = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:8080/api/movies/all", {
-        headers: {
-          "Content-Type": "image/jpeg, image/png",
-        },
-      });
+      const response = await fetch("http://localhost:8080/api/movies/all");
       const data = await response.json();
       const transfData = data.map((m) => {
         return {
@@ -34,12 +30,12 @@ const AllMovies = () => {
     fetchData();
   }, []);
 
-  const urlImg = ["https://www.nerdpool.it/wp-content/uploads/2022/06/IWP_EEAAO_poster_web-717x1024.jpg", "https://pad.mymovies.it/filmclub/2019/07/015/locandina.jpg", "https://pad.mymovies.it/filmclub/2010/10/203/locandinapg1.jpg"]
+  // const urlImg = ["https://www.nerdpool.it/wp-content/uploads/2022/06/IWP_EEAAO_poster_web-717x1024.jpg", "https://pad.mymovies.it/filmclub/2019/07/015/locandina.jpg", "https://pad.mymovies.it/filmclub/2010/10/203/locandinapg1.jpg"]
 
   return (
     <div className="allMovies">
       {movie.map((m, index) => (
-        <Movie poster={urlImg[index]} title={m.title} director={m.director} duration={m.duration} key={index} />
+        <Movie title={m.title} director={m.director} duration={m.duration} key={index} />
       ))}
     </div>
   );
