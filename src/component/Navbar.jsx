@@ -6,7 +6,7 @@ const Navbar = () => {
         <header className="container text-center d-flex">
             <Home />
             {items.map((i) => {
-                return <div className='navbar__item'>{i}</div>
+                return <div className='navbar__item' key={i}>{i}</div>
             })}
         </header>
     )

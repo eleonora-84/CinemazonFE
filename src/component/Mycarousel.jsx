@@ -1,5 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-import { ThemeProvider } from "react-bootstrap";
 
 const Mycarousel = () => {
   return (
