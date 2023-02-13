@@ -1,13 +1,20 @@
+import { NavLink } from 'react-router-dom';
 import '../styles/navbar.css'
-import Home from './Logo'
+import Logo from './Logo'
 const Navbar = () => {
-    const items = ["Tutti i film", "Offerte e Promozioni", "Dove siamo"]
+    
     return(
         <header className="container text-center d-flex navbar__main">
-            <Home />
-            {items.map((i) => {
-                return <div className='navbar__item' key={i}>{i}</div>
-            })}
+            <Logo />
+            <NavLink className='navbar__item' to="/movies">
+                Tutti i film
+            </NavLink>
+            <NavLink className='navbar__item' to="/promo">
+                Offerte e Promozioni
+            </NavLink>
+            <NavLink className='navbar__item' to="/where">
+                Dove siamo
+            </NavLink>
         </header>
     )
 }

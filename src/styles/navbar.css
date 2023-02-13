@@ -14,12 +14,16 @@
     margin-right: auto;
     font-size: 150%;
     padding: 20px 30px;
+    text-decoration: none;
+    color:inherit;
 }
 
 .navbar__item {
     padding: 25px;
     vertical-align: middle;
     margin-right: 30px;
+    text-decoration: none;
+    color:inherit;
 }
 
 .skinTop{
@@ -27,3 +31,4 @@
     display: flex;
     justify-content: center;
 }
+
