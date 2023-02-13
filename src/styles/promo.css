@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Diavlo';
+    src: local('Diavlo'), url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf) format('truetype');
+}
+
+
+.promo{
+    font-family: 'Diavlo', serif;
+    text-align: center;
+}
+
+.card{
+    margin: 1rem 1rem;
+}
