@@ -6,6 +6,7 @@ import AllMovies from "./component/AllMovies";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar"
 import SkinTop from "./component/SkinTop"
+import Where from "./component/Where";
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path="/" element= {<Home />} />
       <Route path="/movies" element={<AllMovies/>} />
+      <Route path="/where" element={<Where/>} />
     </Routes>
     </>
     
