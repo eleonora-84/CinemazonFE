@@ -6,7 +6,7 @@ const AllMovies = () => {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchMovies() {
       const response = await fetch("http://localhost:8080/api/movies/all");
       const data = await response.json();
       const transfData = data.map((m) => {
@@ -25,9 +25,9 @@ const AllMovies = () => {
         };
       });
       setMovie(transfData);
-      console.log(movie);
     }
-    fetchData();
+    fetchMovies();
+    console.log(movie);
   }, []);
 
   // const urlImg = ["https://www.nerdpool.it/wp-content/uploads/2022/06/IWP_EEAAO_poster_web-717x1024.jpg", "https://pad.mymovies.it/filmclub/2019/07/015/locandina.jpg", "https://pad.mymovies.it/filmclub/2010/10/203/locandinapg1.jpg"]
