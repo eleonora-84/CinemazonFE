@@ -1,9 +1,15 @@
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { NavLink, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/card.css";
 
 const Movie = (props) => {
+  const movieHandler = () => {
+    console.log(props.title);
+    return props.title;
+  };
+
   return (
     <>
       {/* <img src={props.poster} alt={props.title} /> */}
@@ -19,7 +25,13 @@ const Movie = (props) => {
           <Card.Text>Regia: {props.director}</Card.Text>
           <Card.Text>Durata: {props.duration} minuti</Card.Text>
           <Button variant="light">
-            <NavLink to="/moviecard">Acquista</NavLink>
+            <NavLink to={`/moviecard?title=${props.title}`}>
+              Scheda completa
+            </NavLink>
+          </Button>
+
+          <Button variant="light">
+            <NavLink to="/">Acquista</NavLink>
           </Button>
         </Card.Body>
       </Card>
