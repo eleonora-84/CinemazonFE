@@ -3,7 +3,7 @@ import queryString from "query-string";
 
 import "../styles/card.css";
 
-const MovieCard = (props) => {
+const MovieCard = () => {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
@@ -25,6 +25,13 @@ const MovieCard = (props) => {
       <p>Regia: {movie.director}</p>
       <p>Durata: {movie.duration}</p>
       <p>Trama: </p>
+      <p>Prova: </p>
+      <p>Is VM18? {movie.vm18 && " TRUE"}</p>
+      <p>Is 3K? {movie.threeK && " TRUE"}</p>
+      <p>Is 4K?{movie.fourK && " TRUE"}</p>
+      <p>Is Dolby?{movie.dolby && " TRUE"}</p>
+      <p>Is OV?{movie.ov && " TRUE"}</p>
+      <p>Is VM14?{movie.vm14 && " TRUE"}</p>
     </>
   );
 };
