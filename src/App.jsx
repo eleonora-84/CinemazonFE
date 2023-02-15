@@ -7,6 +7,7 @@ import Home from "./component/Home";
 import MovieCard from "./component/MovieCard";
 import Navbar from "./component/Navbar"
 import Promo from "./component/Promo";
+import AllShows from "./component/AllShows";
 import SkinTop from "./component/SkinTop"
 import Where from "./component/Where";
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/promo" element={<Promo/>} />
       <Route path="/where" element={<Where/>} />
       <Route path="/moviecard" element={<MovieCard/>} />
+      <Route path="/shows" element={<AllShows/>} />
     </Routes>
     </>
     

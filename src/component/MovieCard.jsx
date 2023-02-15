@@ -8,6 +8,7 @@ import Dolby from "../assets/symbols/dolby-atmos.png";
 import OV from "../assets/symbols/OV.jpg";
 
 import "../styles/card.css";
+import { Button } from "react-bootstrap";
 
 const MovieCard = () => {
   const [movie, setMovie] = useState([]);
@@ -87,6 +88,9 @@ const MovieCard = () => {
             />
           )}
         </span>
+        <div>
+          <Button variant="light">Vedi spettacoli</Button>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,9 @@ const Navbar = () => {
             <NavLink className='navbar__item' to="/movies">
                 Tutti i film
             </NavLink>
+            <NavLink className='navbar__item' to="/shows">
+                Tutti gli spettacoli
+            </NavLink>
             <NavLink className='navbar__item' to="/promo">
                 Offerte e Promozioni
             </NavLink>
