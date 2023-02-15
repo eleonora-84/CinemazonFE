@@ -1,34 +1,35 @@
 @font-face {
-    font-family: 'Diavlo';
-    src: local('Diavlo'), url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf) format('truetype');
-  }
- 
+  font-family: "Diavlo";
+  src: local("Diavlo"),
+    url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+      format("truetype");
+}
+
 .navbar__main {
-    display: flex;
-    align-items: center;
-    font-family: 'Diavlo', serif;
-    width: 75%;
-} 
+  display: flex;
+  align-items: center;
+  font-family: "Diavlo", serif;
+  width: 75%;
+}
 
 .logo {
-    margin-right: auto;
-    font-size: 150%;
-    padding: 20px 30px;
-    text-decoration: none;
-    color:inherit;
+  margin-right: auto;
+  font-size: 150%;
+  padding: 20px 30px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar__item {
-    padding: 25px;
-    vertical-align: middle;
-    margin-right: 30px;
-    text-decoration: none;
-    color:inherit;
+  padding: 25px;
+  vertical-align: middle;
+  margin-right: 30px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.skinTop{
-    height: 175px;
-    display: flex;
-    justify-content: center;
+.skinTop {
+  height: 175px;
+  display: flex;
+  justify-content: center;
 }
-

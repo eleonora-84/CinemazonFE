@@ -15,7 +15,8 @@ const AllMovies = () => {
           title: m.title,
           director: m.director,
           duration: m.duration,
-          poster: m.poster,
+          plot: m.plot,
+          moviePoster: m.moviePoster,
           isVM18: m.isVM18,
           is3D: m.is3D,
           is4K: m.is4K,
@@ -25,9 +26,9 @@ const AllMovies = () => {
         };
       });
       setMovie(transfData);
+    console.log(transfData);
     }
     fetchMovies();
-    console.log(movie);
   }, []);
 
   // const urlImg = ["https://www.nerdpool.it/wp-content/uploads/2022/06/IWP_EEAAO_poster_web-717x1024.jpg", "https://pad.mymovies.it/filmclub/2019/07/015/locandina.jpg", "https://pad.mymovies.it/filmclub/2010/10/203/locandinapg1.jpg"]

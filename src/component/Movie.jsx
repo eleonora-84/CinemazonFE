@@ -1,14 +1,10 @@
-import { useState } from "react";
+
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { NavLink } from "react-router-dom";
 import "../styles/card.css";
 
 const Movie = (props) => {
-  const movieHandler = () => {
-    console.log(props.title);
-    return props.title;
-  };
 
   return (
     <>
@@ -16,14 +12,18 @@ const Movie = (props) => {
       <Card className="singleCard">
         <Card.Img
           variant="top"
-          src="https://www.nerdpool.it/wp-content/uploads/2022/06/IWP_EEAAO_poster_web-717x1024.jpg"
+          src="https://tinyurl.com/2k98tpkj"
         />
+
+
         {/* TODO sistemare img */}
-        <Card.Body>
+        <Card.Body className="">
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>Plot</Card.Text>
           <Card.Text>Regia: {props.director}</Card.Text>
           <Card.Text>Durata: {props.duration} minuti</Card.Text>
+          <Card.Text>Trama: {props.plot}</Card.Text>
+            <div className="text-center buttons">
           <Button variant="light">
             <NavLink to={`/moviecard?title=${props.title}`}>
               Scheda completa
@@ -33,6 +33,7 @@ const Movie = (props) => {
           <Button variant="light">
             <NavLink to="/">Acquista</NavLink>
           </Button>
+          </div>
         </Card.Body>
       </Card>
     </>
