@@ -12,22 +12,24 @@ const AllShows = () => {
             return {
               id: s.id,
               day: s.day,
-              time: s.time
+              time: s.time,
+              title: s.movie.title
             };
           });
           setShows(transfData)
           
-        console.log(data);
+        console.log(transfData);
         }
         fetchShows();
       }, []);
 
     return(
-      <>
+      <div>
+
       {shows.map((s, index) => (
-        <Show day={s.day} time={s.time} key={index} />
+        <Show day={s.day} time={s.time} title={s.title} key={index} />
       ))}
-      </>
+      </div>
     )
 }
-export default AllShows
+export default AllShows;
