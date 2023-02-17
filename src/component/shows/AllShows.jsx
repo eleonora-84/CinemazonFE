@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Show from "./Show";
+import Show from "../Show";
 
 const AllShows = () => {
     const [shows, setShows] = useState([]);
