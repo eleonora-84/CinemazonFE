@@ -1,5 +1,5 @@
-import "../styles/where.css";
-import image from "../assets/fake-google-maps.jpg";
+import "../../styles/where.css";
+import image from "../../assets/fake-google-maps.jpg";
 // import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 const Where = () => {

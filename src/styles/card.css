@@ -5,21 +5,19 @@
       format("truetype");
 }
 
-.allMovies {
+.allMovies, .allShows {
   display: flex;
   flex-direction: row;
   flex-direction: wrap;
   justify-content: center;
 }
+
 .singleCard {
   width: 14rem;
   margin: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: small;
-}
-
-.singleCard Button {
 }
 
 .poster {
@@ -72,3 +70,8 @@ Button{
     align-content: flex-end;
 }
 
+.title{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}

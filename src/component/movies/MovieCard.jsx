@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import queryString from "query-string";
-import ThreeD from "../assets/symbols/RealD.png";
-import FourK from "../assets/symbols/4K.jpeg";
-import vm14 from "../assets/symbols/vm14.png";
-import vm18 from "../assets/symbols/vm18.png";
-import Dolby from "../assets/symbols/dolby-atmos.png";
-import OV from "../assets/symbols/OV.jpg";
+import FourK from "../../assets/symbols/4K.jpeg";
+import vm14 from "../../assets/symbols/vm14.png";
+import vm18 from "../../assets/symbols/vm18.png";
+import Dolby from "../../assets/symbols/dolby-atmos.png";
+import OV from "../../assets/symbols/OV.jpg";
 
-import "../styles/card.css";
+import "../../styles/card.css";
 import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const MovieCard = () => {
   const [movie, setMovie] = useState([]);
@@ -56,15 +56,7 @@ const MovieCard = () => {
             />
           )}
         </span>
-        <span>
-          {movie.threeD && (
-            <img
-              className="symbols"
-              src={ThreeD}
-              alt="Film disponibile anche in 3D"
-            />
-          )}
-        </span>
+        <span>{movie.threeD && <strong className="h1">3D</strong>}</span>
         <span>
           {movie.fourK && (
             <img
@@ -89,7 +81,9 @@ const MovieCard = () => {
           )}
         </span>
         <div>
-          <Button variant="light">Vedi spettacoli</Button>
+          <Button variant="light">
+            <NavLink to={`/showcard?movie=${movie.title}`}>Vedi spettacoli</NavLink>
+          </Button>
         </div>
       </div>
     </div>
