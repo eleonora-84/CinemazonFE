@@ -34,3 +34,36 @@
   background-color: white;
   color: black;
 }
+
+.chooseSeat{
+    margin-top: 5rem;
+}
+
+.seatsAndPay{
+    height: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    width: 150px;
+}
+
+.summary{
+    padding: 30px;
+    border: solid;
+}
+
+.error{
+    color:red;
+}
+
+.paypal{
+    max-height: 100px;
+}
+
+.applepay{
+    max-height: 60px;
+}
+
+.creditCard{
+    max-height: 50px;
+}
+
