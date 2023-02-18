@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import queryString from "query-string";
+import "../../styles/show.css";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ShowCard = () => {
   const [show, setShow] = useState([]);
@@ -19,14 +22,25 @@ const ShowCard = () => {
     }
     fetchShowsByMovieTitle();
   }, []);
+
   return (
     <div className="d-grid justify-content-center text-center">
       {show.map((s) => {
         return (
-          <div key={s.id}>
+          <div className="showList" key={s.id}>
             <h2>{s.movie.title}</h2>
-            <p>Giorno: {s.day}</p>
-            <p>Ora: {s.time}</p>
+
+            <span className="showItem">Giorno: {s.day}</span>
+            <span className="showItem">Ora: {s.time}</span>
+            <span className="showItem">{s.auditorium.name}</span>
+
+            <div>
+              <Link to="/buy" show={s.id}>
+                <Button variant="light">
+                  Acquista
+                </Button>
+              </Link>
+            </div>
           </div>
         );
       })}

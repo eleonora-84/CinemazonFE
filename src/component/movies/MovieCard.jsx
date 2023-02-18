@@ -34,7 +34,7 @@ const MovieCard = () => {
         </div>
         <h2>{movie.title}</h2>
         <p>Regia: {movie.director}</p>
-        <p>Durata: {movie.duration}</p>
+        <p>Durata: {movie.duration} minuti</p>
         <p>Trama: {movie.plot}</p>
         <p>Info extra: </p>
 

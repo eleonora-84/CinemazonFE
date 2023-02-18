@@ -29,7 +29,10 @@ const AllMovies = () => {
     console.log(transfData);
     }
     fetchMovies();
-  }, []);
+  }, []); 
+  
+// [   [] -> non ho dipendenze  ]
+// es [movie] --> ogni volta che viene modificato movie invoca la callback di parametro di useEffect
 
   // const urlImg = ["https://www.nerdpool.it/wp-content/uploads/2022/06/IWP_EEAAO_poster_web-717x1024.jpg", "https://pad.mymovies.it/filmclub/2019/07/015/locandina.jpg", "https://pad.mymovies.it/filmclub/2010/10/203/locandinapg1.jpg"]
 
