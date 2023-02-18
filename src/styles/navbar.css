@@ -5,6 +5,18 @@
       format("truetype");
 }
 
+.navbar__main a {
+  text-decoration: none;
+  color: white
+}
+
+.navbar__main a:hover{
+  color: yellow;
+  text-decoration-line: overline underline;
+  text-decoration-thickness: 2px;
+  
+}
+
 .navbar__main {
   display: flex;
   align-items: center;
