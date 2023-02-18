@@ -39,16 +39,23 @@
     margin-top: 5rem;
 }
 
-.seatsAndPay{
+.select{
     height: 30px;
     margin-left: 20px;
     margin-bottom: 30px;
     width: 150px;
 }
 
-.summary{
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.summary, .divSeatAndPay{
+    margin-top: 40px;
     padding: 30px;
     border: solid;
+    display: inline-block;
 }
 
 .error{

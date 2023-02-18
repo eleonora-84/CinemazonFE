@@ -13,6 +13,7 @@ import AllShows from "./component/shows/AllShows";
 import SkinTop from "./component/navbar/SkinTop"
 import Where from "./component/where/Where";
 import SingleShow from "./component/shows/SingleShow";
+import ThankYouPage from "./component/typ/ThankYouPage";
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
       <Route path="/moviecard" element={<MovieCard/>} />
       <Route path="/showcard" element={<ShowCard/>} />
       <Route path="/buy" element={<SingleShow />} />
+      <Route path="/typ" element={<ThankYouPage />} />
     </Routes>
     </>
     

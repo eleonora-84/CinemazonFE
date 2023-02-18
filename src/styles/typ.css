@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Showtime";
+  src: local("Shotime"), url(../assets/fonts/Showtime.ttf) format("truetype");
+}
+
+.typ {
+  font-family: "Showtime";
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.movie {
+  font-size: 8rem;
+}

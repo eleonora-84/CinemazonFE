@@ -6,6 +6,7 @@ import "../../styles/show.css";
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";
+import { Link } from "react-router-dom";
 
 const SingleShow = (props) => {
   //   const [show, setShow] = useState([]);
@@ -33,7 +34,6 @@ const SingleShow = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setShowError(false);
     if (
       mySeat === "Scegli" ||
@@ -52,83 +52,89 @@ const SingleShow = (props) => {
     <div className="buy">
       <MyOffCanvas />
 
-      {/* <h2>{props.movie.title}</h2> da errore undefined */}
-      {show.movie && <h2>Acquista il tuo biglietto per {show.movie.title}</h2>}
+      
+      <h2>Acquista il tuo biglietto</h2>
+      <div className="container">
+        <div className="divSeatAndPay">
+      {show.movie && <h4>{show.movie.title}</h4>}
 
-      <h3>
-        {show.day} - {show.time}{" "}
-      </h3>
-      <form onSubmit={handleSubmit}>
-        {/* TODO separare component*/}
+          <h4>
+            {show.day} - {show.time}{" "}
+          </h4>
+          <form onSubmit={handleSubmit}>
+            {/* TODO separare component*/}
 
-        <p className="chooseSeat">
-          Scegli il posto
-          <select
-            name="seatChoosen"
-            className="seatsAndPay"
-            onChange={(e) => setMySeat(e.target.value)}
-          >
-            <option value="Scegli">Scegli</option>
-            {rows.map((r) =>
-              seats.map((s) => (
-                <option key={r + s} value={`${r}${s}`}>
-                  {`${r}${s}`}
-                </option>
-              ))
+            <p className="chooseSeat">
+              Scegli il posto
+              <select
+                name="seatChoosen"
+                className="select"
+                onChange={(e) => setMySeat(e.target.value)}
+              >
+                <option value="Scegli">Scegli</option>
+                {rows.map((r) =>
+                  seats.map((s) => (
+                    <option key={r + s} value={`${r}${s}`}>
+                      {`${r}${s}`}
+                    </option>
+                  ))
+                )}
+              </select>
+            </p>
+            <p className="choosePayment">
+              Scegli il metodo di pagamento
+              <select
+                name="payment"
+                className="select"
+                onChange={(e) => setMyPayment(e.target.value)}
+              >
+                <option value="Scegli">Scegli</option>
+                <option value="CreditCard">Carta di credito</option>
+                <option value="PayPal">PayPal</option>
+                <option value="ApplePay">Apple Pay</option>
+              </select>
+            </p>
+            <Button type="submit" variant="light">
+              Conferma
+            </Button>
+            {showError && (
+              <p className="error">Seleziona posto e metodo di pagamento</p>
             )}
-          </select>
-        </p>
-        <p className="choosePayment">
-          Scegli il metodo di pagamento
-          <select
-            name="payment"
-            className="seatsAndPay"
-            onChange={(e) => setMyPayment(e.target.value)}
-          >
-            <option value="Scegli">Scegli</option>
-            <option value="CreditCard">Carta di credito</option>
-            <option value="PayPal">PayPal</option>
-            <option value="ApplePay">Apple Pay</option>
-          </select>
-        </p>
-        <Button type="submit" variant="light">
-          Conferma
-        </Button>
-        {showError && (
-          <p className="error">Seleziona posto e metodo di pagamento</p>
-        )}
-      </form>
-      {showSummary && (
-        <div className="summary">
-          <p>RIEPILOGO ACQUISTO:</p>
-          {show.movie && <p>{show.movie.title}</p>}
-          {show.day && <p>{show.day}</p>}
-          {show.time && <p>{show.time}</p>}
-          {show.auditorium.name && <p>{show.auditorium.name}</p>}
-          {<p>Posto {mySeat}</p>}
-          {
-            <p>
-              {myPayment === "CreditCard" && (
-                <img src={cc} alt="CreditCard" className="creditCard" />
-              )}
-            </p>
-          }
-          {
-            <p>
-              {myPayment === "PayPal" && (
-                <img src={paypal} alt="PayPal" className="paypal" />
-              )}
-            </p>
-          }{" "}
-          {
-            <p>
-              {myPayment === "ApplePay" && (
-                <img src={applepay} alt="ApplePay" className="applepay" />
-              )}
-            </p>
-          }
+          </form>
         </div>
-      )}
+        {showSummary && (
+          <div className="summary">
+            <h5>RIEPILOGO ACQUISTO:</h5>
+            {show.movie && <p>{show.movie.title}</p>}
+            {show.day && <p>{show.day}</p>}
+            {show.time && <p>{show.time}</p>}
+            {show.auditorium.name && <p>{show.auditorium.name}</p>}
+            {<p>Posto {mySeat}</p>}
+            {
+              <p>
+                {myPayment === "CreditCard" && (
+                  <img src={cc} alt="CreditCard" className="creditCard" />
+                )}
+              </p>
+            }
+            {
+              <p>
+                {myPayment === "PayPal" && (
+                  <img src={paypal} alt="PayPal" className="paypal" />
+                )}
+              </p>
+            }{" "}
+            {
+              <p>
+                {myPayment === "ApplePay" && (
+                  <img src={applepay} alt="ApplePay" className="applepay" />
+                )}
+              </p>
+            }
+            <Button variant="light"><Link to="/typ">Paga</Link></Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
