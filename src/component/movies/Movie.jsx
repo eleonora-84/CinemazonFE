@@ -23,7 +23,7 @@ const Movie = (props) => {
               </NavLink>
             </Button>
             <Button variant="light">
-              <NavLink to={`/showcard?movie=${props.title}`}>Acquista</NavLink>
+              <NavLink to={`/showcard?movie=${props.title}`}>Vedi spettacoli</NavLink>
             </Button>
           </div>
         </Card.Body>
