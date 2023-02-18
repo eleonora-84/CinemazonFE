@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/card.css";
 
 const Show = (props) => {
@@ -15,13 +15,15 @@ const Show = (props) => {
         <Card.Text>Ora: {props.time}</Card.Text>
         <div className="text-center buttons">
           <Button variant="light">
-            <NavLink to={`/moviecard?title=${props.title}`}>
+            <Link to={`/moviecard?title=${props.title}`}>
               Scheda completa
-            </NavLink>
+            </Link>
           </Button>
 
           <Button variant="light">
-            <NavLink to={`/showcard?movie=${props.title}`}>Acquista</NavLink>
+          <Link to={`/buy?title=${props.title}&day=${props.day}&time=${props.time}`}>
+
+            Acquista</Link>
           </Button>
         </div>
       </Card.Body>

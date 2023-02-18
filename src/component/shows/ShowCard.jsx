@@ -35,7 +35,7 @@ const ShowCard = () => {
             <span className="showItem">{s.auditorium.name}</span>
 
             <div>
-              <Link to="/buy" show={s.id}>
+              <Link to={`/buy?title=${s.movie.title}&day=${s.day}&time=${s.time}`}>
                 <Button variant="light">
                   Acquista
                 </Button>

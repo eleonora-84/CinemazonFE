@@ -12,7 +12,7 @@ import Promo from "./component/promo/Promo";
 import AllShows from "./component/shows/AllShows";
 import SkinTop from "./component/navbar/SkinTop"
 import Where from "./component/where/Where";
-import SingleShow from "./component/shows/SingleShow";
+import Buy from "./component/shows/Buy";
 import ThankYouPage from "./component/typ/ThankYouPage";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
       <Route path="/where" element={<Where/>} />
       <Route path="/moviecard" element={<MovieCard/>} />
       <Route path="/showcard" element={<ShowCard/>} />
-      <Route path="/buy" element={<SingleShow />} />
+      <Route path="/buy" element={<Buy />} />
       <Route path="/typ" element={<ThankYouPage />} />
     </Routes>
     </>

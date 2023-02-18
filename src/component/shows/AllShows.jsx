@@ -18,8 +18,6 @@ const AllShows = () => {
         };
       });
       setShows(transfData);
-
-      console.log(transfData);
     }
     fetchShows();
   }, []);

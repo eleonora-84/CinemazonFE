@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import queryString from "query-string";
 import MyOffCanvas from "./MyOffCanvas";
 
 import "../../styles/show.css";
@@ -8,7 +9,7 @@ import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";
 import { Link } from "react-router-dom";
 
-const SingleShow = (props) => {
+const Buy = () => {
   //   const [show, setShow] = useState([]);
   const [show, setShow] = useState([]);
 
@@ -23,8 +24,17 @@ const SingleShow = (props) => {
 
   useEffect(() => {
     async function fetchShow() {
+      const query = queryString.parse(window.location.search);
+      console.log(query);
+      const title = query.title;
+      const day = query.day;
+      const time = query.time;
+      console.log("Title " + title);
+      console.log("Day " + day);
+      console.log("Time " + time);
+
       const response = await fetch(
-        "http://localhost:8080/api/shows/titledaytime?title=Everything%20Everywhere%20all%20at%20once&day=02-03-2023&time=20:30"
+        `http://localhost:8080/api/shows/titledaytime?title=${title}&day=${day}&time=${time}`
       );
       const data = await response.json();
       setShow(data);
@@ -138,4 +148,4 @@ const SingleShow = (props) => {
     </div>
   );
 };
-export default SingleShow;
+export default Buy
