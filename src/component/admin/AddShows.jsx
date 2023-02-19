@@ -45,21 +45,16 @@ const AddShows = () => {
 
   useEffect(() => {
     async function fetchMovies() {
-      const response = await fetch("http://localhost:8080/api/movies/all");
-      const data = await response.json();
-      setAllMovies(data);
-      console.log(data);
+      fetch("http://localhost:8080/api/movies/all")
+      .then((result) => result.json())
+      .then((data) => setAllMovies(data))
+    }
+    async function fetchAuditoriums() {
+      fetch("http://localhost:8080/api/auditoriums/all")
+      .then((result) => result.json())
+      .then((data) => setAllAuditoriums(data))
     }
     fetchMovies();
-  }, []);
-
-  useEffect(() => {
-    async function fetchAuditoriums() {
-      const response = await fetch("http://localhost:8080/api/auditoriums/all");
-      const data = await response.json();
-      setAllAuditoriums(data);
-      console.log(data);
-    }
     fetchAuditoriums();
   }, []);
 
@@ -77,12 +72,11 @@ const AddShows = () => {
       <label htmlFor="inputMovie">Film: </label>
       <select
         name="allMovieTitles"
-        id="allMovieTitles"
+        className="allMovieTitles"
         onChange={(e) => setMovie(e.target.value)}
       >
       <option value="Scegli">Scegli il film</option>
         {allMovies.map((m) => (
-          
           <option key={m.id} value={m.title}>{m.title}</option>
         ))}
       </select>
@@ -92,12 +86,11 @@ const AddShows = () => {
       <label htmlFor="inputAuditorium">Sala: </label>
       <select
         name="allAuditoriums"
-        id="allAuditoriums"
+        className="allAuditoriums"
         onChange={(e) => setAuditorium(e.target.value)}
       >
       <option value="Scegli">Scegli la sala</option>
         {allAuditoriums.map((a) => (
-          
           <option key={a.id} value={a.name}>{a.name}</option>
         ))}
       </select>

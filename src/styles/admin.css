@@ -13,3 +13,7 @@
     margin: 50px;
     font-family: "Diavlo", serif;
   }
+
+select{
+  height: 1.8rem;
+}
