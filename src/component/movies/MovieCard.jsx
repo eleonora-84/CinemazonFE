@@ -30,7 +30,7 @@ const MovieCard = () => {
     <div className="d-flex justify-content-center">
       <div className="cardContainer">
         <div className="posterContainer">
-          <img className="poster" src={movie.moviePoster} alt="" />
+          <img className="poster" src={movie.moviePoster} alt={movie.title} />
         </div>
         <h2>{movie.title}</h2>
         <p>Regia: {movie.director}</p>

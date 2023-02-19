@@ -29,9 +29,6 @@ const Buy = () => {
       const title = query.title;
       const day = query.day;
       const time = query.time;
-      console.log("Title " + title);
-      console.log("Day " + day);
-      console.log("Time " + time);
 
       const response = await fetch(
         `http://localhost:8080/api/shows/titledaytime?title=${title}&day=${day}&time=${time}`

@@ -15,6 +15,7 @@ import Where from "./component/where/Where";
 import Buy from "./component/shows/Buy";
 import ThankYouPage from "./component/typ/ThankYouPage";
 import NotFound from "./component/not_found/NotFound";
+import AddMovies from "./component/admin/AddMovies";
 
 function App() {
   
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
     <SkinTop />
-    <Navbar />
+    <Navbar sticky="top" />
     <Routes>
       <Route path="/" element= {<Home />} />
       <Route path="/movies" element={<AllMovies/>} />
@@ -33,7 +34,9 @@ function App() {
       <Route path="/showcard" element={<ShowCard/>} />
       <Route path="/buy" element={<Buy />} />
       <Route path="/typ" element={<ThankYouPage />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/addmovies" element={<AddMovies />} />
+  
+      <Route path="*" element={<NotFound />} />    
     </Routes>
     </>
     

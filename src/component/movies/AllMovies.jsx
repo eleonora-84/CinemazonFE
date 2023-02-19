@@ -39,7 +39,7 @@ const AllMovies = () => {
   return (
     <div className="allMovies">
       {movie.map((m, index) => (
-        <Movie title={m.title} director={m.director} duration={m.duration} key={index} />
+        <Movie title={m.title} director={m.director} duration={m.duration} key={index} plot={m.plot} moviePoster={m.moviePoster} />
       ))}
     </div>
   );

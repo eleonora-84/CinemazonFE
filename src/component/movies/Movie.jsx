@@ -9,13 +9,11 @@ const Movie = (props) => {
       {/* <img src={props.poster} alt={props.title} /> */}
       <Card className="singleCard">
         {/* TODO sistemare img */}
-        {/* <Card.Img variant="top" src={props.poster} /> */}
-        <Card.Body className="">
+        <Card.Img variant="top" src={props.moviePoster} />
+        <Card.Body>
+          
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text>{props.plot}</Card.Text>
-          <Card.Text>Regia: {props.director}</Card.Text>
-          <Card.Text>Durata: {props.duration} minuti</Card.Text>
-          <Card.Text>Trama: {props.plot}</Card.Text>
+         
           <div className="text-center buttons">
             <Button variant="light">
               <NavLink to={`/moviecard?title=${props.title}`}>
@@ -32,3 +30,5 @@ const Movie = (props) => {
   );
 };
 export default Movie;
+
+

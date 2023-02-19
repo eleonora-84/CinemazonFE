@@ -17,8 +17,6 @@ const ShowCard = () => {
       );
       const data = await response.json();
       setShow(data);
-      console.log("Shows: " + show);
-      console.log(`http://localhost:8080/api/shows/?movie=${movie}`);
     }
     fetchShowsByMovieTitle();
   }, []);
