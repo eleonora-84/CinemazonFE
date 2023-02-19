@@ -16,7 +16,7 @@ const AddMovies = () => {
     setPlot("");
     setMoviePoster("");
   };
-  
+
   const handleAddMovie = (e) => {
     e.preventDefault();
     addMovie({
@@ -30,23 +30,20 @@ const AddMovies = () => {
   };
 
   const addMovie = async (movie) => {
-    try{
-        let result = await fetch("http://localhost:8080/api/movies/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(movie)
-        })
+    try {
+      let result = await fetch("http://localhost:8080/api/movies/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(movie),
+      });
       let data = await result.json();
       console.log(data);
-
+    } catch (err) {
+      console.log(err);
     }
-    catch (err){
-        console.log(err);
-    }
-    
-  }
+  };
 
   return (
     <form className="addMoviesForm" onSubmit={handleAddMovie}>
@@ -95,6 +92,10 @@ const AddMovies = () => {
         id="inputMoviePoster"
         placeholder="Url locandina"
       />
+
+
+      {/* Mancano properties (3D, 4K, etc) */}
+
 
       <Button variant="light" type="submit">
         Inserisci film

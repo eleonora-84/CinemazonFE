@@ -1,7 +1,15 @@
+@font-face {
+    font-family: "Diavlo";
+    src: local("Diavlo"),
+      url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+        format("truetype");
+  }
+  
 
-.addMoviesForm {
+.addMoviesForm, .addShowsForm {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 50px;
+    font-family: "Diavlo", serif;
   }

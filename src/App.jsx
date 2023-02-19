@@ -16,6 +16,7 @@ import Buy from "./component/shows/Buy";
 import ThankYouPage from "./component/typ/ThankYouPage";
 import NotFound from "./component/not_found/NotFound";
 import AddMovies from "./component/admin/AddMovies";
+import AddShows from "./component/admin/AddShows";
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
       <Route path="/buy" element={<Buy />} />
       <Route path="/typ" element={<ThankYouPage />} />
       <Route path="/addmovies" element={<AddMovies />} />
+      <Route path="/addshows" element={<AddShows />} />
   
       <Route path="*" element={<NotFound />} />    
     </Routes>
