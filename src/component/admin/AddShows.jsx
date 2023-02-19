@@ -32,19 +32,15 @@ const AddShows = () => {
   };
 
   const addShow = async (show) => {
-    try {
-      let result = await fetch("http://localhost:8080/api/shows/", {
+    await fetch("http://localhost:8080/api/shows/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(show),
-      });
-      let data = await result.json();
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
+      })
+      .then((result) => result.json())
+      .catch((err) => console.log(err))
   };
 
   useEffect(() => {

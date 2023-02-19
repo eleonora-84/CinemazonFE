@@ -26,7 +26,7 @@ const AllShows = () => {
   return (
     <div className="allShows">
       {shows.map((s, index) => (
-        <Show day={s.day} time={s.time} title={s.title} key={index} />
+        <Show day={s.day} time={s.time} title={s.movie.title} key={index} />
       ))}
     </div>
   );

@@ -30,19 +30,15 @@ const AddMovies = () => {
   };
 
   const addMovie = async (movie) => {
-    try {
-      let result = await fetch("http://localhost:8080/api/movies/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(movie),
-      });
-      let data = await result.json();
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
+    fetch("http://localhost:8080/api/movies/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(movie),
+    })
+      .then((result) => result.json())
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -93,9 +89,7 @@ const AddMovies = () => {
         placeholder="Url locandina"
       />
 
-
       {/* Mancano properties (3D, 4K, etc) */}
-
 
       <Button variant="light" type="submit">
         Inserisci film

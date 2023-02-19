@@ -29,13 +29,12 @@ const Buy = () => {
       const title = query.title;
       const day = query.day;
       const time = query.time;
-      
+
       fetch(
         `http://localhost:8080/api/shows/titledaytime?title=${title}&day=${day}&time=${time}`
       )
-      .then((response) => response.json())
-      .then((data) => setShow(data))
-      
+        .then((response) => response.json())
+        .then((data) => setShow(data));
     }
     fetchShow();
   }, []);
@@ -60,15 +59,17 @@ const Buy = () => {
     <div className="buy">
       <MyOffCanvas />
 
-      
       <h2>Acquista il tuo biglietto</h2>
       <div className="container">
         <div className="divSeatAndPay">
-      {show.movie && <h4>{show.movie.title}</h4>}
+          {show.movie && <h4>{show.movie.title}</h4>}
 
           <h4>
-            {show.day} - {show.time}{" "}
+            {show.day} - {show.time}
           </h4>
+          
+          {show.auditorium && <h5>{show.auditorium.name}</h5> }
+          
           <form onSubmit={handleSubmit}>
             {/* TODO separare component*/}
 
@@ -121,21 +122,27 @@ const Buy = () => {
             {
               <p>
                 {myPayment === "CreditCard" && (
-                  <Link to="/typ"><img src={cc} alt="CreditCard" className="creditCard" /></Link>
+                  <Link to="/typ">
+                    <img src={cc} alt="CreditCard" className="creditCard" />
+                  </Link>
                 )}
               </p>
             }
             {
               <p>
                 {myPayment === "PayPal" && (
-                  <Link to="/typ"><img src={paypal} alt="PayPal" className="paypal" /></Link>
+                  <Link to="/typ">
+                    <img src={paypal} alt="PayPal" className="paypal" />
+                  </Link>
                 )}
               </p>
             }{" "}
             {
               <p>
                 {myPayment === "ApplePay" && (
-                  <Link to="/typ"><img src={applepay} alt="ApplePay" className="applepay" /></Link>
+                  <Link to="/typ">
+                    <img src={applepay} alt="ApplePay" className="applepay" />
+                  </Link>
                 )}
               </p>
             }
@@ -146,4 +153,4 @@ const Buy = () => {
     </div>
   );
 };
-export default Buy
+export default Buy;
