@@ -120,25 +120,25 @@ const Buy = () => {
             {
               <p>
                 {myPayment === "CreditCard" && (
-                  <img src={cc} alt="CreditCard" className="creditCard" />
+                  <Link to="/typ"><img src={cc} alt="CreditCard" className="creditCard" /></Link>
                 )}
               </p>
             }
             {
               <p>
                 {myPayment === "PayPal" && (
-                  <img src={paypal} alt="PayPal" className="paypal" />
+                  <Link to="/typ"><img src={paypal} alt="PayPal" className="paypal" /></Link>
                 )}
               </p>
             }{" "}
             {
               <p>
                 {myPayment === "ApplePay" && (
-                  <img src={applepay} alt="ApplePay" className="applepay" />
+                  <Link to="/typ"><img src={applepay} alt="ApplePay" className="applepay" /></Link>
                 )}
               </p>
             }
-            <Button variant="light"><Link to="/typ">Paga</Link></Button>
+            <span>Clicca per confermare il pagamento.</span>
           </div>
         )}
       </div>
