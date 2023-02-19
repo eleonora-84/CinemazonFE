@@ -7,17 +7,18 @@ const AllShows = () => {
 
   useEffect(() => {
     async function fetchShows() {
-      const response = await fetch("http://localhost:8080/api/shows/all");
-      const data = await response.json();
-      const transfData = data.map((s) => {
+      fetch("http://localhost:8080/api/shows/all")
+      .then((response) => response.json())
+      .then((data) => setShows(data))
+      .then(shows.map((s) => {
         return {
           id: s.id,
           day: s.day,
           time: s.time,
           title: s.movie.title,
         };
-      });
-      setShows(transfData);
+      }))
+      .then(console.log(shows))
     }
     fetchShows();
   }, []);

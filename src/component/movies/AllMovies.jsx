@@ -7,9 +7,10 @@ const AllMovies = () => {
 
   useEffect(() => {
     async function fetchMovies() {
-      const response = await fetch("http://localhost:8080/api/movies/all");
-      const data = await response.json();
-      const transfData = data.map((m) => {
+      fetch("http://localhost:8080/api/movies/all")
+      .then((response) => response.json())
+      .then((data) => setMovie(data))
+      .then(movie.map((m) => {
         return {
           id: m.id,
           title: m.title,
@@ -24,9 +25,9 @@ const AllMovies = () => {
           isOV: m.isOV,
           isVM14: m.isVM14,
         };
-      });
-      setMovie(transfData);
-    console.log(transfData);
+      }))
+      .then(console.log(movie))
+     
     }
     fetchMovies();
   }, []); 

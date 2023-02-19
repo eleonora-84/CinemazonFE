@@ -29,12 +29,13 @@ const Buy = () => {
       const title = query.title;
       const day = query.day;
       const time = query.time;
-
-      const response = await fetch(
+      
+      fetch(
         `http://localhost:8080/api/shows/titledaytime?title=${title}&day=${day}&time=${time}`
-      );
-      const data = await response.json();
-      setShow(data);
+      )
+      .then((response) => response.json())
+      .then((data) => setShow(data))
+      
     }
     fetchShow();
   }, []);

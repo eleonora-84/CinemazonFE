@@ -10,13 +10,12 @@ const ShowCard = () => {
   useEffect(() => {
     async function fetchShowsByMovieTitle() {
       const query = queryString.parse(window.location.search);
-      console.log(query);
       const movie = query.movie;
-      const response = await fetch(
+      fetch(
         `http://localhost:8080/api/shows/?movie=${movie}`
-      );
-      const data = await response.json();
-      setShow(data);
+      )
+      .then((response) => response.json())
+      .then((data) => setShow(data))
     }
     fetchShowsByMovieTitle();
   }, []);

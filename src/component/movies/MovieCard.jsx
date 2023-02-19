@@ -17,11 +17,10 @@ const MovieCard = () => {
     async function fetchMoviesByTitle() {
       const query = queryString.parse(window.location.search);
       const title = query.title;
-      const response = await fetch(
-        `http://localhost:8080/api/movies/?title=${title}`
-      );
-      const data = await response.json();
-      setMovie(data);
+      fetch(`http://localhost:8080/api/movies/?title=${title}`
+      )
+      .then((response) => response.json())
+      .then((data) => setMovie(data))
     }
     fetchMoviesByTitle();
   }, []);
