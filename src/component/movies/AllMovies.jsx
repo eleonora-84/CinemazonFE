@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { CardGroup } from "react-bootstrap";
 import Movie from "./Movie";
-import './card.css'
+import './moviecard.css'
 
 const AllMovies = () => {
   const [movie, setMovie] = useState([]);
@@ -39,9 +40,11 @@ const AllMovies = () => {
 
   return (
     <div className="allMovies">
+      
       {movie.map((m, index) => (
         <Movie title={m.title} director={m.director} duration={m.duration} key={index} plot={m.plot} moviePoster={m.moviePoster} />
       ))}
+      
     </div>
   );
 };

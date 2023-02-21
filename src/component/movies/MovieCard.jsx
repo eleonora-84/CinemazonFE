@@ -6,7 +6,8 @@ import vm18 from "../../assets/symbols/vm18.png";
 import Dolby from "../../assets/symbols/dolby-atmos.png";
 import OV from "../../assets/symbols/OV.jpg";
 
-import "./card.css";
+import './moviecard.css'
+
 import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 

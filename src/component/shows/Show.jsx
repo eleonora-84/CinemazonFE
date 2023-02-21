@@ -7,10 +7,10 @@ const Show = (props) => {
   return (
     <Card className="singleCard">
       {/* TODO sistemare img */}
-      <Card.Title className="title">{props.title}
+      <Card.Title className="cardTitle">{props.title}
 
       </Card.Title>
-      <Card.Body className="">
+      <Card.Body className="cardBody d-flex flex-column justify-content-end">
         <Card.Text>Giorno: {props.day}</Card.Text>
         <Card.Text>Ora: {props.time}</Card.Text>
         <div className="text-center buttons">

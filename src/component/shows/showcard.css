@@ -96,7 +96,25 @@
   margin: 2rem;
   font-family: "Diavlo";
   font-size: small;
+  border-radius: 20px;
 }
+
+.cardTitle{
+  border-radius: 20px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color:white;
+  color: black;
+  
+}
+
+.cardBody{
+  font-size: 15px;
+  text-align: center;
+  height: "100%"
+}
+
 
 Button a, Button a:visited{
     color:black;
@@ -108,18 +126,9 @@ Button{
     margin: 10px 0;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: flex-end;
-}
 
-.title{
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
-}
+
+
 
 .seat{
   max-width: 20px;

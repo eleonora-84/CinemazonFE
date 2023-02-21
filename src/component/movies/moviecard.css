@@ -15,9 +15,23 @@
 .singleCard {
   width: 14rem;
   margin: 2rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Diavlo";
   font-size: small;
+  border-radius: 20px;
+}
+
+.cardImg{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  z-index: 0;
+}
+
+.cardBody{
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  height: "100%"
 }
 
 .poster {
@@ -55,13 +69,7 @@ Button a, Button a:visited{
 
 Button{
     margin: 10px 0;
-}
-
-.buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: flex-end;
+    
 }
 
 .title{
