@@ -15,14 +15,15 @@ const Buy = () => {
   //   const [show, setShow] = useState([]);
   const [show, setShow] = useState([]);
 
-  const [mySeat, setMySeat] = useState("");
   const [myPayment, setMyPayment] = useState("");
 
   const [showError, setShowError] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
+  const [booking, setBooking] = useState([]);
 
-  const rows = ["A", "B", "C", "D", "E"];
-  const seats = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  const handleBookingChange = (newBooking) => {
+    setBooking(newBooking);
+  };
 
   useEffect(() => {
     async function fetchShow() {
@@ -39,14 +40,13 @@ const Buy = () => {
         .then((data) => setShow(data));
     }
     fetchShow();
+    handleBookingChange();
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowError(false);
     if (
-      mySeat === "Scegli" ||
-      mySeat === "" ||
       myPayment === "Scegli" ||
       myPayment === ""
     ) {
@@ -75,25 +75,9 @@ const Buy = () => {
           <form onSubmit={handleSubmit}>
             {/* TODO separare component*/}
             {show.auditorium && (
-              <SeatMap auditoriumSeats={show.auditorium.seat} />
+              <SeatMap auditoriumSeats={show.auditorium.seat} onBookingChange={handleBookingChange}/>
             )}
-            {/* <p className="chooseSeat">
-              Scegli il posto
-              <select
-                name="seatChoosen"
-                className="select"
-                onChange={(e) => setMySeat(e.target.value)}
-              >
-                <option value="Scegli">Scegli</option>
-                {rows.map((r) =>
-                  seats.map((s) => (
-                    <option key={r + s} value={`${r}${s}`}>
-                      {`${r}${s}`}
-                    </option>
-                  ))
-                )}
-              </select>
-            </p> */}
+
             <p className="choosePayment">
               Scegli il metodo di pagamento
               <select
@@ -122,7 +106,7 @@ const Buy = () => {
             {show.day && <p>{show.day}</p>}
             {show.time && <p>{show.time}</p>}
             {show.auditorium.name && <p>{show.auditorium.name}</p>}
-            {<p>Posto {mySeat}</p>}
+            {<p>Posto {booking}</p>}
             {
               <p>
                 {myPayment === "CreditCard" && (

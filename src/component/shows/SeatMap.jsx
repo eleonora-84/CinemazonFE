@@ -3,7 +3,7 @@ import free from "../../assets/free.jpg";
 import taken from "../../assets/taken.jpg";
 import "./showcard.css";
 
-const SeatMap = ({ auditoriumSeats }) => {
+const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   const [seats, setSeats] = useState([]);
   const [srcImg, setSrcImg] = useState(free);
   const [booking, setBooking] = useState([]);
@@ -20,7 +20,7 @@ const SeatMap = ({ auditoriumSeats }) => {
     setRowD(auditoriumSeats.slice(30, 40));
     setRowE(auditoriumSeats.slice(40, 50));
   };
-  
+
   useEffect(() => {
     setSeats(auditoriumSeats);
     sliceRows();
@@ -38,6 +38,7 @@ const SeatMap = ({ auditoriumSeats }) => {
     } else {
       setSrcImg(free);
     }
+    onBookingChange(booking);
   };
 
   return (
