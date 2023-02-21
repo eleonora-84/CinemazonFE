@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
-import "../../styles/admin.css";
+import "./admin.css";
 
 const AddShows = () => {
   const [day, setDay] = useState("");

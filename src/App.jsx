@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 
 import AllMovies from "./component/movies/AllMovies";
-import Home from "./component/Home";
+import Home from "./component/home/Home";
 import MovieCard from "./component/movies/MovieCard";
 import ShowCard from "./component/shows/ShowCard";
 import Navbar from "./component/navbar/Navbar"

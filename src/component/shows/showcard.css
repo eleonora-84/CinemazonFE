@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Diavlo";
+  src: local("Diavlo"),
+    url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+      format("truetype");
+}
+
+.allShows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.singleCard {
+  width: 14rem;
+  margin: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: small;
+}
+
+Button a, Button a:visited{
+    color:black;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+Button{
+    margin: 10px 0;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+}
+
+.title{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}

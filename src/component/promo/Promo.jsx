@@ -1,4 +1,4 @@
-import "../../styles/promo.css";
+import "./promo.css";
 import Card from 'react-bootstrap/Card';
 
 const Promo = () => {

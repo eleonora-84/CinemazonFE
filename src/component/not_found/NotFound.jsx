@@ -1,5 +1,5 @@
 import notFound from '../../assets/sfondi/star_wars_404.webp'
-import '../../styles/notfound.css'
+import './notfound.css'
 
 const NotFound = () => {
 

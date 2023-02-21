@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
-import "../../styles/admin.css";
+import "./admin.css";
 
 const AddMovies = () => {
   const [title, setTitle] = useState("");

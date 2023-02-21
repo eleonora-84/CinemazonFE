@@ -1,12 +1,21 @@
-import "../../styles/where.css";
-import image from "../../assets/fake-google-maps.jpg";
-// import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import "./where.css";
 
 const Where = () => {
   return (
     <div className="where">
       <h2>COME RAGGIUNGERCI</h2>
-      <img src={image} alt="come raggiungerci" />
+      <div className="mapouter">
+        <div className="gmap_canvas">
+          <iframe
+            width="600"
+            height="500"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=legoland%20danimarca&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameBorder="0"
+            
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@
       format("truetype");
 }
 
-.allMovies, .allShows {
+.allMovies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -46,12 +46,6 @@
 
 }
 
-/* a:visited{
-    
-    color: red;
-
-    
-} */
 
 Button a, Button a:visited{
     color:black;

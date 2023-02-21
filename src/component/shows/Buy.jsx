@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import queryString from "query-string";
 import MyOffCanvas from "./MyOffCanvas";
 
-import "../../styles/show.css";
+import "./show.css";
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";

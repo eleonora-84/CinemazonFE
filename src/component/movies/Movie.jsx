@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { NavLink } from "react-router-dom";
-import "../../styles/card.css";
+import "./card.css";
 
 const Movie = (props) => {
   return (

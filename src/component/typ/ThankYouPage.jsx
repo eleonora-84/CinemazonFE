@@ -1,4 +1,4 @@
-import '../../styles/typ.css'
+import './typ.css'
 const ThankYouPage = () => {
     return(
         <div className="typ">
