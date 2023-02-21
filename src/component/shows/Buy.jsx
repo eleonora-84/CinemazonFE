@@ -6,10 +6,9 @@ import "./showcard.css";
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";
-import free from "../../assets/free.jpg";
-import taken from "../../assets/taken.jpg";
 import { Link } from "react-router-dom";
 import SeatMap from "./SeatMap";
+import Caption from "./Caption";
 
 const Buy = () => {
   //   const [show, setShow] = useState([]);
@@ -46,10 +45,7 @@ const Buy = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowError(false);
-    if (
-      myPayment === "Scegli" ||
-      myPayment === ""
-    ) {
+    if (myPayment === "Scegli" || myPayment === "") {
       setShowError(true);
       setShowSummary(false);
       return;
@@ -63,6 +59,7 @@ const Buy = () => {
 
       <h2>Acquista il tuo biglietto</h2>
       <div className="container">
+        <Caption />
         <div className="divSeatAndPay">
           {show.movie && <h4>{show.movie.title}</h4>}
 
@@ -75,22 +72,43 @@ const Buy = () => {
           <form onSubmit={handleSubmit}>
             {/* TODO separare component*/}
             {show.auditorium && (
-              <SeatMap auditoriumSeats={show.auditorium.seat} onBookingChange={handleBookingChange}/>
+              <SeatMap
+                auditoriumSeats={show.auditorium.seat}
+                onBookingChange={handleBookingChange}
+              />
             )}
 
-            <p className="choosePayment">
-              Scegli il metodo di pagamento
-              <select
-                name="payment"
-                className="select"
-                onChange={(e) => setMyPayment(e.target.value)}
-              >
-                <option value="Scegli">Scegli</option>
-                <option value="CreditCard">Carta di credito</option>
-                <option value="PayPal">PayPal</option>
-                <option value="ApplePay">Apple Pay</option>
-              </select>
-            </p>
+            <div className="choosePayment">
+              <p>Scegli il metodo di pagamento:</p>
+              <div>
+                <input
+                  type="radio"
+                  name="payment"
+                  value="CreditCard"
+                  onChange={(e) => setMyPayment(e.target.value)}
+                />
+                <label htmlFor="creditCard">Carta di credito</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="payment"
+                  value="PayPal"
+                  onChange={(e) => setMyPayment(e.target.value)}
+                />
+                <label htmlFor="payPal">PayPal</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="payment"
+                  value="ApplePay"
+                  onChange={(e) => setMyPayment(e.target.value)}
+                />
+                <label htmlFor="applePay">Apple Pay</label>
+              </div>
+            </div>
+
             <Button type="submit" variant="light">
               Conferma
             </Button>
@@ -106,7 +124,7 @@ const Buy = () => {
             {show.day && <p>{show.day}</p>}
             {show.time && <p>{show.time}</p>}
             {show.auditorium.name && <p>{show.auditorium.name}</p>}
-            {<p>Posto {booking}</p>}
+            {<p>Posto {booking.join(" - ")}</p>}
             {
               <p>
                 {myPayment === "CreditCard" && (
@@ -137,14 +155,7 @@ const Buy = () => {
             <span>Clicca per confermare il pagamento.</span>
           </div>
         )}
-        <div>
-          Legenda:
-          <div>
-            <img src={free} alt="Posto libero" className="seat" /> Posto libero
-            <br />
-            <img src={taken} alt="Posto selezionato" className="seat" /> Posto selezionato
-          </div>
-        </div>
+        
       </div>
     </div>
   );

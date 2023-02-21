@@ -27,6 +27,8 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   }, []);
 
   const takeSeatHandler = (seat) => {
+    onBookingChange(booking);
+
     if (booking.includes(seat)) {
       setBooking(booking.filter((selectedSeat) => selectedSeat !== seat)); // filter crea nuovo array con elementi del primo array filtrati secondo la condizione dopo la freccia, ovvero tutti tranne il selezionato se .includes restituisce true
     } else {
@@ -38,7 +40,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
     } else {
       setSrcImg(free);
     }
-    onBookingChange(booking);
+
   };
 
   return (
@@ -52,7 +54,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
                   src={booking.includes(r) ? taken : free}
                   alt={r}
                   className="seat"
-                  onClick={() => takeSeatHandler(r)}
+                  onClick={() => {takeSeatHandler(r)}}
                 />
               </th>
             ))}

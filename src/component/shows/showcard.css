@@ -55,6 +55,16 @@
     padding: 30px;
     border: solid;
     display: inline-block;
+    border-radius: 20px;
+}
+
+.caption{
+  margin-top: 40px;
+  border: solid;
+  padding: 20px;
+  height:fit-content;
+  display: inline-block;
+  border-radius: 20px;
 }
 
 .error{
