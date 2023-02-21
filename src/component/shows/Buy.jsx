@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import queryString from "query-string";
 import MyOffCanvas from "./MyOffCanvas";
-
-import "./show.css";
+import "./showcard.css";
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";

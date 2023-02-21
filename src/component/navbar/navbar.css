@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Diavlo";
   src: local("Diavlo"),
-    url(../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+    url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
       format("truetype");
 }
 

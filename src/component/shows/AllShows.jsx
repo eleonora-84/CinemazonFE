@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Show from "./Show";
-import "../../styles/card.css";
+import "./showcard.css";
+
 
 const AllShows = () => {
   const [shows, setShows] = useState([]);

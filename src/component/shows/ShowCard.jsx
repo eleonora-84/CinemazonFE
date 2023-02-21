@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import queryString from "query-string";
-import "./show.css";
+import "./showcard.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
