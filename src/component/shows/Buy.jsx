@@ -6,7 +6,10 @@ import "./showcard.css";
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";
+import free from "../../assets/free.jpg";
+import taken from "../../assets/taken.jpg";
 import { Link } from "react-router-dom";
+import SeatMap from "./SeatMap";
 
 const Buy = () => {
   //   const [show, setShow] = useState([]);
@@ -66,13 +69,15 @@ const Buy = () => {
           <h4>
             {show.day} - {show.time}
           </h4>
-          
-          {show.auditorium && <h5>{show.auditorium.name}</h5> }
-          
+
+          {show.auditorium && <h5>{show.auditorium.name}</h5>}
+
           <form onSubmit={handleSubmit}>
             {/* TODO separare component*/}
-
-            <p className="chooseSeat">
+            {show.auditorium && (
+              <SeatMap auditoriumSeats={show.auditorium.seat} />
+            )}
+            {/* <p className="chooseSeat">
               Scegli il posto
               <select
                 name="seatChoosen"
@@ -88,7 +93,7 @@ const Buy = () => {
                   ))
                 )}
               </select>
-            </p>
+            </p> */}
             <p className="choosePayment">
               Scegli il metodo di pagamento
               <select
@@ -148,6 +153,14 @@ const Buy = () => {
             <span>Clicca per confermare il pagamento.</span>
           </div>
         )}
+        <div>
+          Legenda:
+          <div>
+            <img src={free} alt="Posto libero" className="seat" /> Posto libero
+            <br />
+            <img src={taken} alt="Posto selezionato" className="seat" /> Posto selezionato
+          </div>
+        </div>
       </div>
     </div>
   );

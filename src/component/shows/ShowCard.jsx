@@ -12,7 +12,7 @@ const ShowCard = () => {
       const query = queryString.parse(window.location.search);
       const movie = query.movie;
       fetch(
-        `http://localhost:8080/api/shows/?movie=${movie}`
+        `http://localhost:8080/api/shows/movie/?movie=${movie}`
       )
       .then((response) => response.json())
       .then((data) => setShow(data))
@@ -41,6 +41,7 @@ const ShowCard = () => {
           </div>
         );
       })}
+      
     </div>
   );
 };

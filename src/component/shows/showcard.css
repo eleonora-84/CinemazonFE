@@ -110,3 +110,9 @@ Button{
     margin: 5px;
     padding: 5px;
 }
+
+.seat{
+  max-width: 20px;
+}
+
+
