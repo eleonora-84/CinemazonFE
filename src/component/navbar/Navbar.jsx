@@ -1,24 +1,28 @@
 import { NavLink } from 'react-router-dom';
 import './navbar.css'
 import Logo from './Logo'
+import SkinTop from './SkinTop';
 const Navbar = () => {
     
     return(
-        <header className="container text-center d-flex navbar__main">
+       <div className='topContainer'>
+        <header className="container text-center d-flex navbarMain">
             <Logo />
-            <NavLink className='navbar__item' to="/movies">
+            <NavLink className='navbarItem' to="/movies">
                 Tutti i film
             </NavLink>
-            <NavLink className='navbar__item' to="/shows">
+            <NavLink className='navbarItem' to="/shows">
                 Tutti gli spettacoli
             </NavLink>
-            <NavLink className='navbar__item' to="/promo">
+            <NavLink className='navbarItem' to="/promo">
                 Offerte e Promozioni
             </NavLink>
-            <NavLink className='navbar__item' to="/where">
+            <NavLink className='navbarItem' to="/where">
                 Dove siamo
             </NavLink>
-        </header>
+        </header> 
+        <SkinTop />
+        </div>
     )
 }
 export default Navbar

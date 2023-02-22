@@ -44,7 +44,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   };
 
   return (
-    <div>
+    <div className="map">
       <table className="myTable">
         <tbody>
           <tr>

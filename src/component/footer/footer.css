@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Diavlo";
+  src: local("Diavlo"),
+    url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+      format("truetype");
+}
+
+.footer {
+  font-family: "Diavlo", serif;
+  position: sticky;
+  
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 90px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: solid #f4845f 1px;
+}

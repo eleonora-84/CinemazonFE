@@ -5,24 +5,29 @@
       format("truetype");
 }
 
-.navbar__main a {
+.navbarMain a {
   text-decoration: none;
   color: white
 }
 
-.navbar__main a:hover{
-  color: yellow;
-  text-decoration-line: overline underline;
-  text-decoration-thickness: 2px;
+.navbarMain a:hover{
   
+  background-color: #F4845F;
+  color: black;
+  border-radius: 20px;
 }
 
-.navbar__main {
+.navbarMain {
   display: flex;
   align-items: center;
   font-family: "Diavlo", serif;
   width: 75%;
-  
+}
+
+.topContainer{
+  position: sticky;
+  top: 0;
+  border-bottom: solid #F4845F 1px;
 }
 
 .logo {
@@ -33,16 +38,22 @@
   color: inherit;
 }
 
-.navbar__item {
+.navbarItem {
   padding: 25px;
   vertical-align: middle;
   margin-right: 30px;
   text-decoration: none;
   color: inherit;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
 }
 
 .skinTop {
-  height: 175px;
+  height: 70px;
   display: flex;
   justify-content: center;
+  background-image: url(../../assets/sfondi/immagine.jpg);
+  background-repeat: repeat-x;
+  background-size: 300px;
 }

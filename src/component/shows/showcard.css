@@ -17,7 +17,8 @@
 .showList {
   margin: 20px 0;
   padding: 20px;
-  border-style: outset;
+  border-radius: 20px;
+  border: solid #F4845F 0.5px;
 }
 
 .my-offcanvas .offcanvas-body {
@@ -53,14 +54,15 @@
 .summary, .divSeatAndPay{
     margin-top: 40px;
     padding: 30px;
-    border: solid;
+    border: solid #F4845F 0.5px;
     display: inline-block;
     border-radius: 20px;
+
 }
 
 .caption{
   margin-top: 40px;
-  border: solid;
+  border: solid #F4845F 0.5px;
   padding: 20px;
   height:fit-content;
   display: inline-block;
@@ -93,23 +95,33 @@
 
 .singleCard {
   width: 14rem;
-  margin: 2rem;
+
   font-family: "Diavlo";
   font-size: small;
   border-radius: 20px;
+  border-color: #F4845F;
 }
 
 .cardTitle{
-  border-radius: 20px;
+  
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   text-align: center;
-  margin: 5px;
-  padding: 5px;
-  background-color:white;
+  
+  background-color:#F4845F;
+  border: solid #F4845F 1px;
   color: black;
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80px;
+  margin:0
   
 }
 
 .cardBody{
+  
   font-size: 15px;
   text-align: center;
   height: "100%"
@@ -126,12 +138,17 @@ Button{
     margin: 10px 0;
 }
 
-
-
-
-
 .seat{
   max-width: 20px;
 }
 
+.map{
+  display: grid;
+  justify-content: center;
+  margin: 30px;
+}
+
+.myTable{
+  margin:20px;
+}
 

@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Routes, Route } from "react-router-dom";
 
-
 import AllMovies from "./component/movies/AllMovies";
 import Home from "./component/home/Home";
 import MovieCard from "./component/movies/MovieCard";
@@ -10,21 +9,23 @@ import ShowCard from "./component/shows/ShowCard";
 import Navbar from "./component/navbar/Navbar"
 import Promo from "./component/promo/Promo";
 import AllShows from "./component/shows/AllShows";
-import SkinTop from "./component/navbar/SkinTop"
 import Where from "./component/where/Where";
 import Buy from "./component/shows/Buy";
 import ThankYouPage from "./component/typ/ThankYouPage";
 import NotFound from "./component/not_found/NotFound";
 import AddMovies from "./component/admin/AddMovies";
 import AddShows from "./component/admin/AddShows";
+import Footer from "./component/footer/Footer";
+
 
 function App() {
   
 
   return (
     <>
-    <SkinTop />
-    <Navbar sticky="top" />
+    <Navbar />
+    
+   
     <Routes>
       <Route path="/" element= {<Home />} />
       <Route path="/movies" element={<AllMovies/>} />
@@ -40,6 +41,8 @@ function App() {
   
       <Route path="*" element={<NotFound />} />    
     </Routes>
+    
+    <Footer />
     </>
     
   )

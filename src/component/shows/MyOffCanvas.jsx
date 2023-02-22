@@ -21,8 +21,7 @@ const MyOffCanvas = () => {
           <Offcanvas.Title>Termini e Condizioni</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Acquistando il biglietto accetti termini e condizioni d'uso. Clicca
-          qui (***DA IMPLEMENTARE***) per maggiori informazioni.
+          ATTENZIONE: Acquistando il biglietto accetti termini e condizioni d'uso.
         </Offcanvas.Body>
       </Offcanvas>
   );
