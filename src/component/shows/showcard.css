@@ -4,10 +4,7 @@
     url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
       format("truetype");
 }
-.buy {
-  font-family: "Diavlo", serif;
-  text-align: center;
-}
+
 
 .showItem {
   margin: 20px 20px;
@@ -21,23 +18,6 @@
   border: solid #F4845F 0.5px;
 }
 
-.my-offcanvas .offcanvas-body {
-  background-color: white;
-  color: black;
-}
-
-.my-offcanvas .offcanvas-header {
-  background-color: white;
-  color: black;
-}
-.my-offcanvas .offcanvas-title {
-  background-color: white;
-  color: black;
-}
-
-.chooseSeat{
-    margin-top: 5rem;
-}
 
 .select{
     height: 30px;
@@ -46,45 +26,8 @@
     width: 150px;
 }
 
-.container{
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.summary, .divSeatAndPay{
-    margin-top: 40px;
-    padding: 30px;
-    border: solid #F4845F 0.5px;
-    display: inline-block;
-    border-radius: 20px;
-     height:fit-content;
-    
-}
 
-.caption{
-  margin-top: 40px;
-  border: solid #F4845F 0.5px;
-  padding: 20px;
-  height:fit-content;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.error{
-    color:red;
-}
-
-.paypal{
-    max-height: 100px;
-}
-
-.applepay{
-    max-height: 60px;
-}
-
-.creditCard{
-    max-height: 50px;
-}
 
 
 .allShows {
@@ -137,19 +80,5 @@ Button a, Button a:visited{
 
 Button{
     margin: 10px 0;
-}
-
-.seat{
-  max-width: 20px;
-}
-
-.map{
-  display: grid;
-  justify-content: center;
-  margin: 30px;
-}
-
-.myTable{
-  margin:20px;
 }
 

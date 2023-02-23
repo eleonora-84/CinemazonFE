@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 import Offcanvas from "react-bootstrap/Offcanvas";
-
-import "./showcard.css";
+import "./buy.css";
 
 const MyOffCanvas = () => {
   const [showOffCanvas, setOffCanvas] = useState(true);

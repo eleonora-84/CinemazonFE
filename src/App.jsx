@@ -10,7 +10,7 @@ import Navbar from "./component/navbar/Navbar";
 import Promo from "./component/promo/Promo";
 import AllShows from "./component/shows/AllShows";
 import Where from "./component/where/Where";
-import Buy from "./component/shows/Buy";
+import Buy from "./component/buy/Buy";
 import ThankYouPage from "./component/typ/ThankYouPage";
 import NotFound from "./component/not_found/NotFound";
 import AddMovies from "./component/admin/AddMovies";

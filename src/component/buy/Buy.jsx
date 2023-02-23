@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import queryString from "query-string";
 import MyOffCanvas from "./MyOffCanvas";
-import "./showcard.css";
+
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";
 import { Link } from "react-router-dom";
 import SeatMap from "./SeatMap";
 import Caption from "./Caption";
-
+import "./buy.css";
 const Buy = () => {
   //   const [show, setShow] = useState([]);
   const [show, setShow] = useState([]);

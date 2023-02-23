@@ -1,6 +1,6 @@
 import free from "../../assets/free.jpg";
 import taken from "../../assets/taken.jpg";
-import "./showcard.css";
+import "./buy.css";
 
 const Caption = () => {
   return (
