@@ -5,7 +5,6 @@
       format("truetype");
 }
 
-
 .showItem {
   margin: 20px 20px;
   font-size: 20px;
@@ -18,7 +17,6 @@
   border-radius: 20px;
   border: solid #F4845F 0.5px;
 }
-
 
 .select{
     height: 30px;
@@ -36,15 +34,13 @@
 
 .singleCard {
   width: 14rem;
-
   font-family: "Diavlo";
   font-size: small;
   border-radius: 20px;
   border-color: #F4845F;
 }
 
-.cardTitle{
-  
+.cardTitle{  
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   text-align: center;
@@ -62,7 +58,6 @@
 }
 
 .cardBody{
-  
   font-size: 15px;
   text-align: center;
   height: "100%"
@@ -79,3 +74,14 @@ Button{
     margin: 10px 0;
 }
 
+.filterByDay{
+  font-family: "Diavlo";
+  text-align: center;
+  margin: 20px;
+  gap: 10px;
+}
+
+select{
+  height: 1.8rem;
+  margin-left: 20px;
+}
