@@ -7,7 +7,7 @@
 
 .navbarMain a {
   text-decoration: none;
-  color: white
+  color: white;
 }
 
 .navbarMain a:hover{
@@ -28,6 +28,8 @@
   position: sticky;
   top: 0;
   border-bottom: solid #F4845F 1px;
+  z-index: 2;
+
 }
 
 .logo {

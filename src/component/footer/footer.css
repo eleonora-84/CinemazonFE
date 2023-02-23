@@ -7,13 +7,15 @@
 
 .footer {
   font-family: "Diavlo", serif;
-  position: sticky;
-  
-  bottom: 0;
+  position: fixed;
+  z-index: 2;
+  bottom: 0px;
   display: flex;
   justify-content: space-evenly;
-  max-height: 90px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: solid #f4845f 1px;
+  height: 90px;
+  width: 100%; 
 }
+

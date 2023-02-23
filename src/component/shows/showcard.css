@@ -57,7 +57,8 @@
     border: solid #F4845F 0.5px;
     display: inline-block;
     border-radius: 20px;
-
+     height:fit-content;
+    
 }
 
 .caption{

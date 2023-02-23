@@ -9,6 +9,10 @@
   margin-top: 10rem;
 }
 
-.movie {
+.enjoy {
   font-size: 8rem;
+}
+
+.enjoy:hover{
+  color:#f4845f;
 }
