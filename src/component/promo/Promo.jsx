@@ -1,41 +1,45 @@
 import "./promo.css";
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 
 const Promo = () => {
   return (
     <>
       <div className="promo">
-        <Card className="text-center card" bg="dark">
-          <Card.Header>CARTA 10 INGRESSI</Card.Header>
-          <Card.Body>
-            <Card.Title>10 ingressi a prezzo speciale!</Card.Title>
+        <Card className="singleCard">
+          <Card.Title className="cardTitle">
+            CARTA PREPAGATA
+          </Card.Title>
+          <Card.Body className="cardBody">
             <Card.Text>
-              ...puoi utilizzarla anche per acquisto online!
+              10 Ingressi a prezzo speciale, utilizzabile anche per acquisto online!
+            </Card.Text>
+            <Card.Text className="bottomText">
+              Richiedila in cassa!
             </Card.Text>
           </Card.Body>
-          <Card.Footer className="text-muted">LINK con condizioni d'uso</Card.Footer>
         </Card>
 
-        <Card className="text-center card" bg="dark">
-          <Card.Header>GIFT CARD</Card.Header>
-          <Card.Body>
-            <Card.Title>Regala il grande cinema!</Card.Title>
+        <Card className="singleCard">
+          <Card.Title className="cardTitle">
+            GIFT CARD
+          </Card.Title>
+          <Card.Body className="cardBody">
             <Card.Text>
-              ...puoi utilizzarla anche per acquisto online!
+              Regala il grande cinema! Puoi utilizzarla anche per acquisto online!
+            </Card.Text>
+            <Card.Text className="bottomText">
+              Richiedila in cassa!
             </Card.Text>
           </Card.Body>
-          <Card.Footer className="text-muted">LINK con condizioni d'uso</Card.Footer>
         </Card>
-
-        <Card className="text-center card" bg="dark">
-          <Card.Header>FESTEGGIA IL TUO COMPLEANNO AL CINEMA</Card.Header>
-          <Card.Body>
-            <Card.Title>Compleanno in Cinemazon</Card.Title>
-            <Card.Text>
-              Festeggia il tuo compleanno con noi
+        <Card className="singleCard">
+          <Card.Title className="cardTitle">COMPLEANNO IN CINEMAZON</Card.Title>
+          <Card.Body className="cardBody">
+            <Card.Text>Festeggia il tuo compleanno con noi, avrai sconti esclisivi anche al bar!</Card.Text>
+            <Card.Text className="bottomText">
+            Chiedi info in cassa.
             </Card.Text>
           </Card.Body>
-          <Card.Footer className="text-muted">LINK con condizioni d'uso</Card.Footer>
         </Card>
       </div>
     </>

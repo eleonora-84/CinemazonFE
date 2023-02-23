@@ -1,14 +1,51 @@
 @font-face {
-    font-family: 'Diavlo';
-    src: local('Diavlo'), url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf) format('truetype');
+  font-family: "Diavlo";
+  src: local("Diavlo"),
+    url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+      format("truetype");
 }
 
-
-.promo{
-    font-family: 'Diavlo', serif;
-    text-align: center;
+.promo {
+  font-family: "Diavlo", serif;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
 
-.card{
-    margin: 1rem 1rem;
+.card {
+  margin: 1rem 1rem;
+}
+.singleCard {
+  font-family: "Diavlo";
+  font-size: small;
+  border-radius: 20px;
+  border-color: #f4845f;
+}
+
+.cardTitle {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+
+  background-color: #f4845f;
+  border: solid #f4845f 1px;
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70px;
+  margin: 0;
+}
+
+.bottomText {
+  text-align: center;
+  border-top: solid #f4845f 1px;
+  padding-top: 12px;
+}
+
+.cardBody {
+  font-size: 15px;
+  text-align: center;
 }

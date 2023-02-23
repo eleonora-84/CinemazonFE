@@ -26,7 +26,7 @@ const MovieCard = () => {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center mt-5">
       <div className="cardContainer">
         <div className="posterContainer">
           <img className="poster" src={movie.moviePoster} alt={movie.title} />
