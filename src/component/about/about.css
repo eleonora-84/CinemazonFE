@@ -16,11 +16,13 @@
   text-decoration: none;
   color: white;
 }
+
 .focus{
     font-size: 25px;
     color: #f4845f;
     padding: 5px;
 }
+
 .focus:hover{
     font-size: 25px;
     color: #f4845f;
@@ -35,8 +37,7 @@
   padding: 5px;
 }
 
-
-
 .aboutContainer{
     margin-top: 90px;
+
 }

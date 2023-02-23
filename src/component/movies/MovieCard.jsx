@@ -6,7 +6,7 @@ import vm18 from "../../assets/symbols/vm18.png";
 import Dolby from "../../assets/symbols/dolby-atmos.png";
 import OV from "../../assets/symbols/OV.jpg";
 
-import './moviecard.css'
+import "./moviecard.css";
 
 import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
@@ -18,10 +18,9 @@ const MovieCard = () => {
     async function fetchMoviesByTitle() {
       const query = queryString.parse(window.location.search);
       const title = query.title;
-      fetch(`http://localhost:8080/api/movies/?title=${title}`
-      )
-      .then((response) => response.json())
-      .then((data) => setMovie(data))
+      fetch(`http://localhost:8080/api/movies/?title=${title}`)
+        .then((response) => response.json())
+        .then((data) => setMovie(data));
     }
     fetchMoviesByTitle();
   }, []);
@@ -38,51 +37,48 @@ const MovieCard = () => {
         <p>Trama: {movie.plot}</p>
         <p>Info extra: </p>
 
-        <span>
-          {movie.vm14 && (
-            <img
-              className="symbols"
-              src={vm14}
-              alt="Film vietato ai minori di 14 anni"
-            />
-          )}
-        </span>
-        <span>
-          {movie.vm18 && (
-            <img
-              className="symbols"
-              src={vm18}
-              alt="Film vietato ai minori di 14 anni"
-            />
-          )}
-        </span>
-        <span>{movie.threeD && <strong className="h1">3D</strong>}</span>
-        <span>
-          {movie.fourK && (
-            <img
-              className="symbols"
-              src={FourK}
-              alt="Film in UHD (Ultra High Definition)"
-            />
-          )}
-        </span>
-        <span>
-          {movie.dolby && (
-            <img className="symbols" src={Dolby} alt="Audio Dolby Atmos" />
-          )}
-        </span>
-        <span>
-          {movie.ov && (
-            <img
-              className="symbols"
-              src={OV}
-              alt="Film disponibile anche in lingua originale"
-            />
-          )}
-        </span>
+        {movie.vm14 && (
+          <img
+            className="symbols"
+            src={vm14}
+            alt="Film vietato ai minori di 14 anni"
+          />
+        )}
+
+        {movie.vm18 && (
+          <img
+            className="symbols"
+            src={vm18}
+            alt="Film vietato ai minori di 14 anni"
+          />
+        )}
+        {movie.threeD && <strong className="h1">3D</strong>}
+
+        {movie.fourK && (
+          <img
+            className="symbols"
+            src={FourK}
+            alt="Film in UHD (Ultra High Definition)"
+          />
+        )}
+
+        {movie.dolby && (
+          <img className="symbols" src={Dolby} alt="Audio Dolby Atmos" />
+        )}
+
+        {movie.ov && (
+          <img
+            className="symbols"
+            src={OV}
+            alt="Film disponibile anche in lingua originale"
+          />
+        )}
+
         <div>
           <Button variant="light">
-            <NavLink to={`/showcard?movie=${movie.title}`}>Vedi spettacoli</NavLink>
+            <NavLink to={`/showcard?movie=${movie.title}`}>
+              Vedi spettacoli
+            </NavLink>
           </Button>
         </div>
       </div>

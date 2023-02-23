@@ -27,9 +27,9 @@ const ShowCard = () => {
           <div className="showList" key={s.id}>
             <h2>{s.movie.title}</h2>
 
-            <span className="showItem">Giorno: {s.day}</span>
-            <span className="showItem">Ora: {s.time}</span>
-            <span className="showItem">{s.auditorium.name}</span>
+            <div className="showItem">Giorno: {s.day}</div>
+            <div className="showItem">Ora: {s.time}</div>
+            <div className="showItem">{s.auditorium.name}</div>
 
             <div>
               <Link to={`/buy?title=${s.movie.title}&day=${s.day}&time=${s.time}`}>

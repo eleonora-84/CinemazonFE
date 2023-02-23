@@ -11,7 +11,6 @@
 }
 
 .navbarMain a:hover{
-  
   background-color: #F4845F;
   color: black;
   border-radius: 20px;
@@ -59,3 +58,4 @@
   background-repeat: repeat-x;
   background-size: 300px;
 }
+

@@ -6,7 +6,7 @@ const Navbar = () => {
     
     return(
        <div className='topContainer'>
-        <header className="container text-center d-flex navbarMain">
+        <header className="navbarMain container text-center d-flex">
             <Logo />
             <NavLink className='navbarItem' to="/movies">
                 Tutti i film
