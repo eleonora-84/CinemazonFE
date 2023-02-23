@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Diavlo";
+  src: local("Diavlo"),
+    url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+      format("truetype");
+}
+
+.about {
+  font-family: "Diavlo", serif;
+  font-size: 20px;
+  text-align: center; 
+  margin-bottom: 50px;
+}
+
+.about a {
+  text-decoration: none;
+  color: white;
+}
+.focus{
+    font-size: 25px;
+    color: #f4845f;
+    padding: 5px;
+}
+.focus:hover{
+    font-size: 25px;
+    color: #f4845f;
+    padding: 5px;
+    background-color: inherit;
+}
+
+.about a:hover {
+  background-color: #f4845f;
+  color: black;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+
+
+.aboutContainer{
+    margin-top: 90px;
+}

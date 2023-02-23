@@ -5,17 +5,41 @@
       format("truetype");
 }
 
-.footer {
+.footerMain {
   font-family: "Diavlo", serif;
   position: fixed;
   z-index: 2;
   bottom: 0px;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: solid #f4845f 1px;
   height: 90px;
   width: 100%; 
+}
+
+
+.footerItem {
+  padding: 25px;
+  vertical-align: middle;
+  margin-right: 30px;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footerMain a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerMain a:hover{
+  
+  background-color: #F4845F;
+  color: black;
+  border-radius: 20px;
 }
 

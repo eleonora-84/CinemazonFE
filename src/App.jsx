@@ -16,8 +16,11 @@ import NotFound from "./component/not_found/NotFound";
 import AddMovies from "./component/admin/AddMovies";
 import AddShows from "./component/admin/AddShows";
 import Footer from "./component/footer/Footer";
+import AdminHome from "./component/admin/AdminHome";
+import About from "./component/about/About";
 
 import "./app.css";
+
 function App() {
   return (
     <>
@@ -33,8 +36,10 @@ function App() {
           <Route path="/showcard" element={<ShowCard />} />
           <Route path="/buy" element={<Buy />} />
           <Route path="/typ" element={<ThankYouPage />} />
+          <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/addmovies" element={<AddMovies />} />
           <Route path="/addshows" element={<AddShows />} />
+          <Route path="/about" element={<About />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

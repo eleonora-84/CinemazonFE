@@ -17,3 +17,32 @@
 select{
   height: 1.8rem;
 }
+
+.adminHome{
+
+  font-family: "Diavlo", serif;
+  font-size: 30px;
+  margin-top:10rem;
+  gap:2rem;
+ text-align: center;
+}
+
+.adminHome a{
+  text-decoration: none;
+  color:white;
+  
+}
+
+.adminHome a:hover, span:hover{
+  
+  background-color: #F4845F;
+  color: black;
+  border-radius: 20px;
+}
+
+.adminItem{
+  max-width: fit-content;
+  padding:10px;
+  margin:20px;
+}
+
