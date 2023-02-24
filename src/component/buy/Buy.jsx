@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import SeatMap from "./SeatMap";
 import Caption from "./Caption";
 import "./buy.css";
+
 const Buy = () => {
   //   const [show, setShow] = useState([]);
   const [show, setShow] = useState([]);
@@ -17,7 +18,6 @@ const Buy = () => {
   const [myPayment, setMyPayment] = useState("");
 
   const [showError, setShowError] = useState(false);
-  const [showSummary, setShowSummary] = useState(false);
   const [booking, setBooking] = useState([]);
 
   const handleBookingChange = (newBooking) => {
@@ -77,7 +77,6 @@ const Buy = () => {
                 onBookingChange={handleBookingChange}
               />
             )}
-
             <div className="choosePayment">
               <p>Scegli il metodo di pagamento:</p>
               <div>
@@ -107,25 +106,7 @@ const Buy = () => {
                 />
                 <label htmlFor="applePay">Apple Pay</label>
               </div>
-            </div>
-
-            <Button type="submit" variant="light">
-              Conferma
-            </Button>
-            {showError && (
-              <p className="error">Seleziona posto e metodo di pagamento</p>
-            )}
-          </form>
-        </div>
-        {showSummary && (
-          <div className="summary">
-            <h5>RIEPILOGO ACQUISTO:</h5>
-            {show.movie && <p>{show.movie.title}</p>}
-            {show.day && <p>{show.day}</p>}
-            {show.time && <p>{show.time}</p>}
-            {show.auditorium.name && <p>{show.auditorium.name}</p>}
-            {<p>Posto {booking.join(" - ")}</p>}
-            {
+              {
               <p>
                 {myPayment === "CreditCard" && (
                   <Link to="/typ">
@@ -152,10 +133,16 @@ const Buy = () => {
                 )}
               </p>
             }
-            <span>Clicca per confermare il pagamento.</span>
-          </div>
-        )}
-        
+            </div>
+
+            <Button type="submit" variant="light">
+              Conferma
+            </Button>
+            {showError && (
+              <p className="error">Seleziona posto e metodo di pagamento</p>
+            )}
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -109,6 +109,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
         </tbody>
       </table>
       <div>Posti selezionati: {booking.join(", ")}</div>
+      <div>Totale &#8364;{booking.length*10},00</div>
     </div>
   );
 };
