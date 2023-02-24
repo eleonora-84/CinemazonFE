@@ -5,20 +5,7 @@ import "./showcard.css";
 const AllShows = () => {
   const [shows, setShows] = useState([]);
   const [day, setDay] = useState("");
-  let singleDay = new Array();
-
-  
-  // const checkDay = () => {
-  //   shows.map((s) => {
-  //     if(singleDay.includes(s.day)){
-
-  //     } else {
-  //       singleDay.push(s.day);
-  //       console.log(singleDay);
-  //       return singleDay;
-  //     }
-  //   })
-  // }
+  const singleDay = new Map();
 
   useEffect(() => {
     async function fetchShows() {
@@ -32,28 +19,17 @@ const AllShows = () => {
               day: s.day,
               time: s.time,
               title: s.movie.title,
-            };
+            }
           })
+
         )
-        // .then(
-        //   shows.map((s) => {
-        //     if(singleDay.includes(s.day)){
-        //       console.log(typeof singleDay)
-        //     } else {
-        //       singleDay.push(s.day);
-        //       return singleDay;
-        //     }
-        //   }
-        //   )
-        // )
-        .then(console.log(shows))
-        .then(console.log(singleDay))
-        .then();
     }
     setDay("all");
     fetchShows();
+
   }, []);
 
+  const uniqueDays = Array.from(new Set(shows.map(s => s.day)));
 
   return (
     <div>
@@ -65,11 +41,11 @@ const AllShows = () => {
           onChange={(e) => setDay(e.target.value)}
         >
           <option value="all">Scegli il giorno</option>
-          {shows.map((s, index) => (
-            <option key={index} value={s.day}>
-              {s.day}
+          {uniqueDays.map((d) => {
+            return <option key={d} value={d}>
+              {d}
             </option>
-          ))}
+          })}
           
         </select>
 
