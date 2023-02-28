@@ -66,13 +66,7 @@ const MovieCard = () => {
           <img className="symbols" src={Dolby} alt="Audio Dolby Atmos" />
         )}
 
-        {movie.ov && (
-          <img
-            className="symbols"
-            src={OV}
-            alt="Film disponibile anche in lingua originale"
-          />
-        )}
+        {movie.ov && <strong className="h1">O.V.</strong>}
 
         <div>
           <Button variant="light">

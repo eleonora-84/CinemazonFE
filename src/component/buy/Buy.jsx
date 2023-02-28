@@ -107,36 +107,30 @@ const Buy = () => {
                 <label htmlFor="applePay">Apple Pay</label>
               </div>
               {
-              <p>
-                {myPayment === "CreditCard" && (
-                  <Link to="/typ">
+                <p>
+                  {myPayment === "CreditCard" && (
                     <img src={cc} alt="CreditCard" className="creditCard" />
-                  </Link>
-                )}
-              </p>
-            }
-            {
-              <p>
-                {myPayment === "PayPal" && (
-                  <Link to="/typ">
+                  )}
+                </p>
+              }
+              {
+                <p>
+                  {myPayment === "PayPal" && (
                     <img src={paypal} alt="PayPal" className="paypal" />
-                  </Link>
-                )}
-              </p>
-            }{" "}
-            {
-              <p>
-                {myPayment === "ApplePay" && (
-                  <Link to="/typ">
+                  )}
+                </p>
+              }{" "}
+              {
+                <p>
+                  {myPayment === "ApplePay" && (
                     <img src={applepay} alt="ApplePay" className="applepay" />
-                  </Link>
-                )}
-              </p>
-            }
+                  )}
+                </p>
+              }
             </div>
 
             <Button type="submit" variant="light">
-              Conferma
+              <Link to="/typ">Conferma</Link>
             </Button>
             {showError && (
               <p className="error">Seleziona posto e metodo di pagamento</p>
