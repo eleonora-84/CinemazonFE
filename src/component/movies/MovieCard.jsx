@@ -4,7 +4,6 @@ import FourK from "../../assets/symbols/4K.jpeg";
 import vm14 from "../../assets/symbols/vm14.png";
 import vm18 from "../../assets/symbols/vm18.png";
 import Dolby from "../../assets/symbols/dolby-atmos.png";
-import OV from "../../assets/symbols/OV.jpg";
 
 import "./moviecard.css";
 
@@ -16,7 +15,7 @@ const MovieCard = () => {
 
   useEffect(() => {
     async function fetchMoviesByTitle() {
-      const query = queryString.parse(window.location.search);
+      const query = queryString.parse(window.location.search);      
       const title = query.title;
       fetch(`http://localhost:8080/api/movies/?title=${title}`)
         .then((response) => response.json())

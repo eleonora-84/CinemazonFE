@@ -1,48 +1,81 @@
 @font-face {
-    font-family: "Diavlo";
-    src: local("Diavlo"),
-      url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
-        format("truetype");
-  }
-  
+  font-family: "Diavlo";
+  src: local("Diavlo"),
+    url(../../assets/fonts/diavlo-black-cufonfonts/Diavlo_MEDIUM_II_37.otf)
+      format("truetype");
+}
 
-.addMoviesForm, .addShowsForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 50px;
-    font-family: "Diavlo", serif;
-  }
+.addMoviesForm,
+.addShowsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 50px;
+  font-family: "Diavlo", serif;
+}
 
-select{
+select {
   height: 1.8rem;
 }
 
-.adminHome{
-
+.adminHome {
   font-family: "Diavlo", serif;
   font-size: 30px;
-  margin-top:10rem;
-  gap:2rem;
- text-align: center;
+  margin-top: 10rem;
+  gap: 2rem;
+  text-align: center;
 }
 
-.adminHome a{
+.adminHome a {
   text-decoration: none;
-  color:white;
-  
+  color: white;
 }
 
-.adminHome a:hover, span:hover{
-  
-  background-color: #F4845F;
+.adminHome a:hover,
+span:hover {
+  background-color: #f4845f;
   color: black;
   border-radius: 20px;
 }
 
-.adminItem{
+.adminItem {
   max-width: fit-content;
-  padding:10px;
-  margin:20px;
+  padding: 10px;
+  margin: 20px;
 }
 
+.deleteSingleCard {
+  width: 14rem;
+  font-family: "Diavlo";
+  font-size: small;
+  border-radius: 20px;
+  border-color: #8C9A9E;
+}
+
+.deletecardTitle {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+
+  background-color: #8C9A9E;
+  border: solid #8C9A9E 1px;
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80px;
+  margin: 0;
+}
+
+.cardBody {
+  font-size: 15px;
+  text-align: center;
+  height: "100%";
+}
+.allShows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

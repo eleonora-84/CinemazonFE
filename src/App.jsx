@@ -20,6 +20,7 @@ import AdminHome from "./component/admin/AdminHome";
 import About from "./component/about/About";
 
 import "./app.css";
+import DeleteShows from "./component/admin/DeleteShows";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/addmovies" element={<AddMovies />} />
           <Route path="/addshows" element={<AddShows />} />
+          <Route path="/deleteshows" element={<DeleteShows />} />
           <Route path="/about" element={<About />} />
 
           <Route path="*" element={<NotFound />} />

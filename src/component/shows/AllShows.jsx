@@ -5,11 +5,10 @@ import "./showcard.css";
 const AllShows = () => {
   const [shows, setShows] = useState([]);
   const [day, setDay] = useState("");
-  const singleDay = new Map();
 
   useEffect(() => {
     async function fetchShows() {
-      fetch("http://localhost:8080/api/shows/all")
+      fetch("http://localhost:8080/api/shows/all/sorted")
         .then((response) => response.json())
         .then((data) => setShows(data))
         .then(
@@ -21,12 +20,10 @@ const AllShows = () => {
               title: s.movie.title,
             }
           })
-
         )
     }
     setDay("all");
     fetchShows();
-
   }, []);
 
   const uniqueDays = Array.from(new Set(shows.map(s => s.day)));
@@ -46,9 +43,7 @@ const AllShows = () => {
               {d}
             </option>
           })}
-          
         </select>
-
       </div>
       <div className="allShows">
         {shows.map((s, index) => {

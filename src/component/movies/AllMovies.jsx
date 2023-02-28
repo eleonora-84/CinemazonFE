@@ -7,7 +7,7 @@ const AllMovies = () => {
 
   useEffect(() => {
     async function fetchMovies() {
-      fetch("http://localhost:8080/api/movies/all")
+      fetch("http://localhost:8080/api/movies/all/sorted")
       .then((response) => response.json())
       .then((data) => setMovie(data))
       .then(movie.map((m) => {

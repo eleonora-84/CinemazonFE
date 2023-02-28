@@ -13,7 +13,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   const [rowE, setRowE] = useState([]);
 
   const sliceRows = () => {
-    setRowA(auditoriumSeats.slice(0, 10));
+    setRowA(auditoriumSeats.slice(0,  10));
     setRowB(auditoriumSeats.slice(10, 20));
     setRowC(auditoriumSeats.slice(20, 30));
     setRowD(auditoriumSeats.slice(30, 40));
