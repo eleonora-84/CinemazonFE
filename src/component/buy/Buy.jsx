@@ -27,7 +27,6 @@ const Buy = () => {
   useEffect(() => {
     async function fetchShow() {
       const query = queryString.parse(window.location.search);
-      console.log(query);
       const title = query.title;
       const day = query.day;
       const time = query.time;
@@ -45,12 +44,11 @@ const Buy = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowError(false);
-    if (myPayment === "Scegli" || myPayment === "") {
+    if (myPayment === "" && booking.length === 0) {
       setShowError(true);
-      setShowSummary(false);
+      console.log(booking);
       return;
     }
-    setShowSummary(true);
   };
 
   return (
@@ -107,21 +105,21 @@ const Buy = () => {
                 <label htmlFor="applePay">Apple Pay</label>
               </div>
               {
-                <p>
+                <p className="myPayment">
                   {myPayment === "CreditCard" && (
                     <img src={cc} alt="CreditCard" className="creditCard" />
                   )}
                 </p>
               }
               {
-                <p>
+                <p className="myPayment">
                   {myPayment === "PayPal" && (
                     <img src={paypal} alt="PayPal" className="paypal" />
                   )}
                 </p>
               }{" "}
               {
-                <p>
+                <p className="myPayment">
                   {myPayment === "ApplePay" && (
                     <img src={applepay} alt="ApplePay" className="applepay" />
                   )}
@@ -133,7 +131,7 @@ const Buy = () => {
               <Link to="/typ">Conferma</Link>
             </Button>
             {showError && (
-              <p className="error">Seleziona posto e metodo di pagamento</p>
+              <p className="error">Seleziona il metodo di pagamento</p>
             )}
           </form>
         </div>

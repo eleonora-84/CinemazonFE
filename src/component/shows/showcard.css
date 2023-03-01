@@ -82,8 +82,9 @@ Button{
 }
 
 select{
-  height: 1.8rem;
+  min-height: 2rem;
   margin-left: 20px;
+  border-radius: 20px;
 }
 
 .showError{

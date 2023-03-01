@@ -52,12 +52,12 @@ const DeleteShows = () => {
       )
       .catch((err) => console.log(err));
   };
-  const uniqueShows = Array.from(new Set(allShows.map((s) => s.movie.title)));
+  const uniqueShows = Array.from(new Set(allShows.map((s) => s.movie.title))).sort();
 
   return (
     <div className="allShows">
       <div className="filterByShow">
-        Filtra per spettacolo:
+        
         <select
           name="allShows"
           className="allShows"

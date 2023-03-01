@@ -6,9 +6,7 @@ import "./showcard.css";
 const Show = (props) => {
   return (
     <Card className="singleCard">
-      {/* TODO sistemare img */}
       <Card.Title className="cardTitle">{props.title}
-
       </Card.Title>
       <Card.Body className="cardBody d-flex flex-column justify-content-end">
         <Card.Text>Giorno: {props.day}</Card.Text>
@@ -19,10 +17,8 @@ const Show = (props) => {
               Scheda completa
             </Link>
           </Button>
-
           <Button variant="light">
           <Link to={`/buy?title=${props.title}&day=${props.day}&time=${props.time}`}>
-
             Acquista</Link>
           </Button>
         </div>

@@ -81,4 +81,10 @@
 
 .myTable {
   margin: 20px;
+  max-width: fit-content;
+}
+
+.paypal, .applepay, .creditCard{
+  max-height: 50px;
+  margin-top: 10px;
 }

@@ -31,7 +31,7 @@ const AllShows = () => {
   return (
     <div>
       <div className="filterByDay">
-        Filtra per giorno: 
+        
         <select
           name="allDays"
           className="allDays"

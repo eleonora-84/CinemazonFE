@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import free from "../../assets/free.jpg";
-import taken from "../../assets/taken.jpg";
+import free from "../../assets/free.png";
+import taken from "../../assets/taken.png";
 import "./buy.css";
 const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   const [seats, setSeats] = useState([]);
