@@ -87,6 +87,6 @@ span:hover {
   gap: 10px;
 }
 
-input{
+input, textarea{
   border-radius: 20px;
 }

@@ -65,7 +65,9 @@ const AddShows = () => {
       console.log(typeof formattedDate);
       return formattedDate;
   }
-
+  const sortedMovies = Array.from(
+    new Set(allMovies.map((m) => m.title))
+  ).sort();
   return (
     <form className="addShowsForm" onSubmit={handleAddShow}>
       
@@ -76,8 +78,8 @@ const AddShows = () => {
         onChange={(e) => setMovie(e.target.value)}
       >
       <option value="Scegli">Scegli il film</option>
-        {allMovies.map((m) => (
-          <option key={m.id} value={m.title}>{m.title}</option>
+        {sortedMovies.map((m, index) => (
+          <option key={index} value={m}>{m}</option>
         ))}
       </select>
       
