@@ -74,6 +74,7 @@ const DeleteShows = () => {
                 <Card.Body className="cardBody d-flex flex-column justify-content-end">
                   <Card.Text>Giorno: {s.day}</Card.Text>
                   <Card.Text>Ora: {s.time}</Card.Text>
+                  <Card.Text>{s.auditorium.name}</Card.Text>
                   <div className="text-center buttons">
                     <Button
                       variant="light"
@@ -96,6 +97,7 @@ const DeleteShows = () => {
                 <Card.Body className="cardBody d-flex flex-column justify-content-end">
                   <Card.Text>Giorno: {s.day}</Card.Text>
                   <Card.Text>Ora: {s.time}</Card.Text>
+                  <Card.Text>{s.auditorium.name}</Card.Text>
                   <div className="text-center buttons">
                     <Button
                       variant="light"
