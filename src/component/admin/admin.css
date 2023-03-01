@@ -26,18 +26,6 @@ select {
   text-align: center;
 }
 
-.adminHome a {
-  text-decoration: none;
-  color: white;
-}
-
-.adminHome a:hover,
-span:hover {
-  background-color: #f4845f;
-  color: black;
-  border-radius: 20px;
-}
-
 .adminItem {
   max-width: fit-content;
   padding: 10px;
@@ -102,4 +90,8 @@ input, textarea{
   font-family: "Diavlo";
   text-align: center;
   font-size: x-large;
+}
+
+.adminBtn{
+  margin: 10px;
 }
