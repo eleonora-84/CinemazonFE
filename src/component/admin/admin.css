@@ -79,3 +79,10 @@ span:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.filterByShow{
+  font-family: "Diavlo";
+  text-align: center;
+  margin: 20px;
+  gap: 10px;
+}
