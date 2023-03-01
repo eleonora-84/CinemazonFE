@@ -11,17 +11,7 @@ const DeleteShows = () => {
   async function fetchShows() {
     fetch("http://localhost:8080/api/shows/all")
       .then((result) => result.json())
-      .then((data) => setAllShows(data))
-      .then(
-        shows.map((s) => {
-          return {
-            id: s.id,
-            day: s.day,
-            time: s.time,
-            title: s.movie.title,
-          };
-        })
-      );
+      .then((data) => setAllShows(data));
   }
 
   useEffect(() => {

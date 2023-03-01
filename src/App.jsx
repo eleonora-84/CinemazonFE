@@ -21,6 +21,7 @@ import About from "./component/about/About";
 
 import "./app.css";
 import DeleteShows from "./component/admin/DeleteShows";
+import DeleteMovies from "./component/admin/DeleteMovies";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/addmovies" element={<AddMovies />} />
           <Route path="/addshows" element={<AddShows />} />
           <Route path="/deleteshows" element={<DeleteShows />} />
+          <Route path="/deletemovies" element={<DeleteMovies />} />
           <Route path="/about" element={<About />} />
 
           <Route path="*" element={<NotFound />} />

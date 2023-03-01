@@ -6,11 +6,15 @@ const AdminHome = () => {
       <Link to="/addmovies" className="adminItem">
         Aggiungi Film
       </Link>
-      <span>||</span>
+      <strong>||</strong>
+      <Link to="/deletemovies" className="adminItem">
+        Cancella Film
+      </Link>
+      <strong className="h1">||</strong>
       <Link to="/addshows" className="adminItem">
         Aggiungi Spettacoli
       </Link>
-      <span>||</span>
+      <strong>||</strong>
       <Link to="/deleteshows" className="adminItem">
         Cancella Spettacoli
       </Link>
