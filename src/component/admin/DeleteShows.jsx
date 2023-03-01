@@ -45,8 +45,8 @@ const DeleteShows = () => {
   const uniqueShows = Array.from(new Set(allShows.map((s) => s.movie.title))).sort();
 
   return (
-    <div className="allShows">
-      <div className="filterByShow">
+    <div className="deleteContainer">
+      <div className="filterByShow text-center">
         
         <select
           name="allShows"

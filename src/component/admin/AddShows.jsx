@@ -13,8 +13,8 @@ const AddShows = () => {
   const clearInputs = () => {
     setDay("");
     setTime("");
-    setMovie("");
-    setAuditorium("");
+    setMovie("Scegli il film");
+    setAuditorium("Scegli il film");
   };
 
   const handleAddShow = (e) => {
