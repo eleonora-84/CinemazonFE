@@ -85,3 +85,10 @@ select{
   height: 1.8rem;
   margin-left: 20px;
 }
+
+.showError{
+  font-family: "Diavlo";
+  margin-top: 10rem;
+  font-size: large;
+  color:tomato
+}
