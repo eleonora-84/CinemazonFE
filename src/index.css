@@ -2,3 +2,7 @@
   background-color: #071013;
   color: white;
 }
+.outletContainer{
+  min-width: 100vh;
+  margin-bottom: 100px;
+}

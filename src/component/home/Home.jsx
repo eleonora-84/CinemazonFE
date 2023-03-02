@@ -1,12 +1,17 @@
-import './hello.css'
+import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
+import { Outlet } from "react-router-dom";
+import "../../index.css";
 
 const Home = () => {
-    return(
-        <div className="home">
-            <p className='hello'>Hello,</p>
-            <p className='movie'>Movie</p>
-            <p className='lover'>Lover!</p>
-        </div>
-    )
-}
-export default Home
+  return (
+    <>
+      <Navbar />
+      <div className="outletContainer">
+        <Outlet />
+      </div>
+      <Footer />
+    </>
+  );
+};
+export default Home;
