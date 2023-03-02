@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import './navbar.css'
 import Logo from './Logo'
 import SkinTop from './SkinTop';
+import './navbar.css'
+
 const Navbar = () => {
     
     return(

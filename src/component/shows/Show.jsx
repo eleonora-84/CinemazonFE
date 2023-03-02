@@ -13,7 +13,7 @@ const Show = (props) => {
         <Card.Text>Ora: {props.time}</Card.Text>
         <div className="text-center buttons">
           <Button variant="light">
-            <Link to={`/moviecard?title=${props.title}`}>
+            <Link to={`/moviecard/${props.title}`}>
               Scheda completa
             </Link>
           </Button>

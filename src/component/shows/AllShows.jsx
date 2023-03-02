@@ -1,37 +1,29 @@
 import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import Show from "./Show";
 import "./showcard.css";
 
-const AllShows = () => {
-  const [shows, setShows] = useState([]);
-  const [day, setDay] = useState("");
+const fetchShows = async () => {
+  return fetch("http://localhost:8080/api/shows/all/sorted")
+}
 
-  useEffect(() => {
-    async function fetchShows() {
-      fetch("http://localhost:8080/api/shows/all/sorted")
-        .then((response) => response.json())
-        .then((data) => setShows(data))
-        .then(
-          shows.map((s) => {
-            return {
-              id: s.id,
-              day: s.day,
-              time: s.time,
-              title: s.movie.title,
-            }
-          })
-        )
-    }
-    setDay("all");
-    fetchShows();
-  }, []);
+export async function showsLoader(){
+  const shows = await fetchShows()
+    .then(res => res.json());
+    console.log(shows);
+    return shows;
+}
+
+const AllShows = () => {
+  const showsData = useLoaderData();
+  const [shows, setShows] = useState(showsData);
+  const [day, setDay] = useState("all");
 
   const uniqueDays = Array.from(new Set(shows.map(s => s.day)));
 
   return (
     <div>
       <div className="filterByDay">
-        
         <select
           name="allDays"
           className="allDays"

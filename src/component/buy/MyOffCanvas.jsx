@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./buy.css";
 

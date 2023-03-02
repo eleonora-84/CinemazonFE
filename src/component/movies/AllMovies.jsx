@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Movie from "./Movie";
 import './moviecard.css'
@@ -17,37 +17,6 @@ export async function movieLoader(){
 const AllMovies = () => {
   const movieData = useLoaderData();
   const [movie, setMovie] = useState(movieData);
-
-  // useEffect(() => {
-  //   async function fetchMovies() {
-  //     fetch("http://localhost:8080/api/movies/all/sorted")
-  //     .then((response) => response.json())
-  //     .then((data) => setMovie(data))
-  //     .then(movie.map((m) => {
-  //       return {
-  //         id: m.id,
-  //         title: m.title,
-  //         director: m.director,
-  //         duration: m.duration,
-  //         plot: m.plot,
-  //         moviePoster: m.moviePoster,
-  //         isVM18: m.isVM18,
-  //         is3D: m.is3D,
-  //         is4K: m.is4K,
-  //         isDolby: m.dolby,
-  //         isOV: m.isOV,
-  //         isVM14: m.isVM14,
-  //       };
-  //     }))
-  //     .then(console.log(movie))
-     
-  //   }
-  //   fetchMovies();
-  // }, []); 
-  
-// [   [] -> non ho dipendenze  ]
-// es [movie] --> ogni volta che viene modificato movie invoca la callback di parametro di useEffect
-
 
   return (
     <div className="allMovies">

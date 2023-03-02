@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./moviecard.css";
 
 const Movie = (props) => {
@@ -12,15 +12,15 @@ const Movie = (props) => {
           <Card.Title className="title">{props.title}</Card.Title>
           <Card.Footer className="">
             <Button variant="light">
-              <NavLink to={`/moviecard/${props.title}`}>
+              <Link to={`/moviecard/${props.title}`}>
                 {console.log(props.title)}
                 Scheda completa
-              </NavLink>
+              </Link>
             </Button>
             <Button variant="light">
-              <NavLink to={`/showcard?movie=${props.title}`}>
+              <Link to={`/showcard?movie=${props.title}`}>
                 Vedi spettacoli
-              </NavLink>
+              </Link>
             </Button>
           </Card.Footer>
         </Card.Body>

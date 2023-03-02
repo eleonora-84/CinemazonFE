@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import free from "../../assets/free.png";
 import taken from "../../assets/taken.png";
 import "./buy.css";
+
 const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   const [seats, setSeats] = useState([]);
   const [srcImg, setSrcImg] = useState(free);
@@ -13,7 +14,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
   const [rowE, setRowE] = useState([]);
 
   const sliceRows = () => {
-    setRowA(auditoriumSeats.slice(0,  10));
+    setRowA(auditoriumSeats.slice(0, 10));
     setRowB(auditoriumSeats.slice(10, 20));
     setRowC(auditoriumSeats.slice(20, 30));
     setRowD(auditoriumSeats.slice(30, 40));
@@ -39,7 +40,6 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
     } else {
       setSrcImg(free);
     }
-
   };
 
   return (
@@ -53,7 +53,9 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
                   src={booking.includes(r) ? taken : free}
                   alt={r}
                   className="seat"
-                  onClick={() => {takeSeatHandler(r)}}
+                  onClick={() => {
+                    takeSeatHandler(r);
+                  }}
                 />
               </th>
             ))}
@@ -109,7 +111,7 @@ const SeatMap = ({ auditoriumSeats, onBookingChange }) => {
         </tbody>
       </table>
       <div>Posti selezionati: {booking.join(", ")}</div>
-      <div>Totale &#8364;{booking.length*10},00</div>
+      <div>Totale &#8364;{booking.length * 10},00</div>
     </div>
   );
 };
@@ -122,4 +124,3 @@ export default SeatMap;
 
 // Nella parte della tabella, invece di utilizzare la variabile srcImg, viene utilizzato l'array di posti seats per ottenere lo stato dell'immagine corretta per ogni posto.
 
-// Inoltre, l'id del posto viene utilizzato come chiave per ogni immagine.

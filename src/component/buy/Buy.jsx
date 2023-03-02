@@ -1,23 +1,18 @@
+import queryString from "query-string";
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
-import queryString from "query-string";
+import { Link } from "react-router-dom";
 import MyOffCanvas from "./MyOffCanvas";
-
+import SeatMap from "./SeatMap";
+import Caption from "./Caption";
 import paypal from "../../assets/symbols/paypal2.png";
 import applepay from "../../assets/symbols/applepay.png";
 import cc from "../../assets/symbols/cc.png";
-import { Link } from "react-router-dom";
-import SeatMap from "./SeatMap";
-import Caption from "./Caption";
 import "./buy.css";
 
 const Buy = () => {
-  //   const [show, setShow] = useState([]);
   const [show, setShow] = useState([]);
-
   const [myPayment, setMyPayment] = useState("");
-
-  const [showError, setShowError] = useState(false);
   const [booking, setBooking] = useState([]);
 
   const handleBookingChange = (newBooking) => {
@@ -41,20 +36,9 @@ const Buy = () => {
     handleBookingChange();
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowError(false);
-    if (myPayment === "" && booking.length === 0) {
-      setShowError(true);
-      console.log(booking);
-      return;
-    }
-  };
-
   return (
     <div className="buy">
       <MyOffCanvas />
-
       <h2>Acquista il tuo biglietto</h2>
       <div className="container">
         <Caption />
@@ -67,8 +51,7 @@ const Buy = () => {
 
           {show.auditorium && <h5>{show.auditorium.name}</h5>}
 
-          <form onSubmit={handleSubmit}>
-            {/* TODO separare component*/}
+          <form>
             {show.auditorium && (
               <SeatMap
                 auditoriumSeats={show.auditorium.seat}
@@ -126,13 +109,9 @@ const Buy = () => {
                 </p>
               }
             </div>
-
-            <Button type="submit" variant="light">
+            <Button variant="light">
               <Link to="/typ">Conferma</Link>
             </Button>
-            {showError && (
-              <p className="error">Seleziona il metodo di pagamento</p>
-            )}
           </form>
         </div>
       </div>

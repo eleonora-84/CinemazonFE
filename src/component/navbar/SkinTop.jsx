@@ -1,5 +1,5 @@
-
 import './navbar.css'
+
 const SkinTop = () => {
     return <div className="skinTop">
            

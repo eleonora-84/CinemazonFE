@@ -11,7 +11,6 @@ const Where = () => {
             height="500"
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=studio%20ghibli%20tokyo&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              
           ></iframe>
         </div>
       </div>

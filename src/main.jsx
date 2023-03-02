@@ -1,15 +1,14 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
-
 import AllMovies, { movieLoader } from "./component/movies/AllMovies";
 import Home from "./component/home/Home";
 import MovieCard, { movieCardLoader } from "./component/movies/MovieCard";
 import ShowCard from "./component/shows/ShowCard";
 import Promo from "./component/promo/Promo";
-import AllShows from "./component/shows/AllShows";
+import AllShows, { showsLoader } from "./component/shows/AllShows";
 import Where from "./component/where/Where";
 import Buy from "./component/buy/Buy";
 import ThankYouPage from "./component/typ/ThankYouPage";
@@ -39,6 +38,7 @@ const router = createBrowserRouter([
       {
         path: "/shows",
         element: <AllShows />,
+        loader: showsLoader,
       },
       {
         path: "/promo",
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
         loader: movieCardLoader,
       },
       {
-        path: "/showcard",
+        path: "/showcard/",
         element: <ShowCard />,
       },
       { 
