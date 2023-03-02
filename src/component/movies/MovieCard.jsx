@@ -10,36 +10,36 @@ import "./moviecard.css";
 import { Button } from "react-bootstrap";
 import { NavLink, useLoaderData } from "react-router-dom";
 
-// const fetchMovie = async () => {
-//   const query = queryString.parse(window.location.search);
-//   const title = query.title;
-//   console.log(title);
-//   return fetch(`http://localhost:8080/api/movies/?title=${title}`)
-// }
-
-// export async function movieCardLoader() {
-//   const movie = await fetchMovie().then(res => res.json());
-//   console.log(movie);
-//   return movie;
-// }
+const fetchMovie = async (title) => {
+  // const query = queryString.parse(window.location.search);
+  // const title = query.title;
+  console.log(title);
+  return fetch(`http://localhost:8080/api/movies/?title=${title}`)
+}
+export async function movieCardLoader({params}) {
+  console.log(params);
+  const movie = await fetchMovie(params.title).then(res => res.json());
+  console.log(movie);
+  return movie;
+}
 
 const MovieCard = () => {
-  const [movie, setMovie] = useState([]);
+  // const [movie, setMovie] = useState([]);
 
-  // const movieData = useLoaderData();
+  const movie = useLoaderData();
 
 
 
-  useEffect(() => {
-    async function fetchMoviesByTitle() {
-      const query = queryString.parse(window.location.search);      
-      const title = query.title;
-      fetch(`http://localhost:8080/api/movies/?title=${title}`)
-        .then((response) => response.json())
-        .then((data) => setMovie(data));
-    }
-    fetchMoviesByTitle();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchMoviesByTitle() {
+  //     const query = queryString.parse(window.location.search);      
+  //     const title = query.title;
+  //     fetch(`http://localhost:8080/api/movies/?title=${title}`)
+  //       .then((response) => response.json())
+  //       .then((data) => setMovie(data));
+  //   }
+  //   fetchMoviesByTitle();
+  // }, []);
 
   return (
     <div className="d-flex justify-content-center mt-5">

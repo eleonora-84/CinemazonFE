@@ -61,11 +61,12 @@ select {
   text-align: center;
   height: "100%";
 }
-.allShows {
+.allShows, .allMovies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top:20px;
 }
 
 .filterByShow{

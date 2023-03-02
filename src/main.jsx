@@ -6,7 +6,7 @@ import "./index.css";
 
 import AllMovies, { movieLoader } from "./component/movies/AllMovies";
 import Home from "./component/home/Home";
-import MovieCard from "./component/movies/MovieCard";
+import MovieCard, { movieCardLoader } from "./component/movies/MovieCard";
 import ShowCard from "./component/shows/ShowCard";
 import Promo from "./component/promo/Promo";
 import AllShows from "./component/shows/AllShows";
@@ -49,16 +49,18 @@ const router = createBrowserRouter([
         element: <Where />,
       },
       {
-        path: "/moviecard",
+        path: "/moviecard/:title",
         element: <MovieCard />,
-        loader: movieLoader,
-
+        loader: movieCardLoader,
       },
       {
         path: "/showcard",
         element: <ShowCard />,
       },
-      { path: "/buy", element: <Buy /> },
+      { 
+        path: "/buy", 
+        element: <Buy />,
+      },
       {
         path: "/typ",
         element: <ThankYouPage />,
@@ -81,7 +83,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/deletemovies",
-        element: <DeleteMovies />,
+        element: <DeleteMovies />
       },
       {
         path: "/about",

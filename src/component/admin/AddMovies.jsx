@@ -19,8 +19,9 @@ const AddMovies = () => {
     setMoviePoster("");
   };
 
-  const handleCheck = () => {
-    setThreeD(!threeD);
+  const handleCheck = (e) => {
+    console.log(e);
+    setThreeD(e.target.checked);
     console.log(threeD);
   };
 
@@ -108,13 +109,12 @@ const AddMovies = () => {
           id="inputMoviePoster"
           placeholder="Url locandina"
         />
+
         <label htmlFor="input3D">
           3D
           <input
             type="checkbox"
             name="threeD"
-            value={threeD}
-            defaultChecked
             onChange={handleCheck}
           />
         </label>
