@@ -14,6 +14,7 @@ const Movie = (props) => {
           <Card.Footer className="">
             <Button variant="light">
               <NavLink to={`/moviecard?title=${props.title}`}>
+                {console.log(props.title)}
                 Scheda completa
               </NavLink>
             </Button>

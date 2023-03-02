@@ -8,10 +8,27 @@ import Dolby from "../../assets/symbols/dolby-atmos.png";
 import "./moviecard.css";
 
 import { Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
+
+// const fetchMovie = async () => {
+//   const query = queryString.parse(window.location.search);
+//   const title = query.title;
+//   console.log(title);
+//   return fetch(`http://localhost:8080/api/movies/?title=${title}`)
+// }
+
+// export async function movieCardLoader() {
+//   const movie = await fetchMovie().then(res => res.json());
+//   console.log(movie);
+//   return movie;
+// }
 
 const MovieCard = () => {
   const [movie, setMovie] = useState([]);
+
+  // const movieData = useLoaderData();
+
+
 
   useEffect(() => {
     async function fetchMoviesByTitle() {
