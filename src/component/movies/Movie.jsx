@@ -13,7 +13,6 @@ const Movie = (props) => {
           <Card.Footer className="">
             <Button variant="light">
               <Link to={`/moviecard/${props.title}`}>
-                {console.log(props.title)}
                 Scheda completa
               </Link>
             </Button>

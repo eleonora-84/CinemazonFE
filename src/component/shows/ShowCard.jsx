@@ -14,7 +14,7 @@ const ShowCard = () => {
     async function fetchShowsByMovieTitle() {
       const query = queryString.parse(window.location.search);
       const movie = query.movie;
-      fetch(`http://localhost:8080/api/shows/movie/?movie=${movie}`)
+      fetch(`http://localhost:8080/api/shows/movie?title=${movie}`)
         .then((response) => response.json())
         .then((data) => {
           setShow(data);

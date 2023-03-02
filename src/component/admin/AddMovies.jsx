@@ -9,6 +9,11 @@ const AddMovies = () => {
   const [plot, setPlot] = useState("");
   const [moviePoster, setMoviePoster] = useState("");
   const [threeD, setThreeD] = useState(false);
+  const [ov, setOv] = useState(false);
+  const [fourK, setFourK] = useState(false);
+  const [dolby, setDolby] = useState(false);
+  const [rating, setRating] = useState("");
+
   const [inserted, setInserted] = useState(false);
 
   const clearInputs = () => {
@@ -17,14 +22,32 @@ const AddMovies = () => {
     setDuration("");
     setPlot("");
     setMoviePoster("");
+    setRating("classificazione");
   };
 
-  const handleCheck = (e) => {
+  const handleCheckThreeD = (e) => {
     console.log(e);
     setThreeD(e.target.checked);
     console.log(threeD);
   };
 
+  const handleCheckOv = (e) => {
+    console.log(e);
+    setOv(e.target.checked);
+    console.log(ov);
+  };
+
+  const handleCheckFourK = (e) => {
+    console.log(e);
+    setFourK(e.target.checked);
+    console.log(fourK);
+  };
+
+  const handleCheckDolby = (e) => {
+    console.log(e);
+    setDolby(e.target.checked);
+    console.log(dolby);
+  };
   const handleAddMovie = (e) => {
     e.preventDefault();
     addMovie({
@@ -34,6 +57,10 @@ const AddMovies = () => {
       plot: plot,
       moviePoster: moviePoster,
       threeD: threeD,
+      fourK: fourK,
+      ov:ov,
+      dolby:dolby,
+      rating: rating
     });
     clearInputs();
     setInserted(true);
@@ -110,16 +137,52 @@ const AddMovies = () => {
           placeholder="Url locandina"
         />
 
+        <div className="properties">
         <label htmlFor="input3D">
           3D
           <input
             type="checkbox"
             name="threeD"
-            onChange={handleCheck}
+            onChange={handleCheckThreeD}
           />
         </label>
 
-        {/* Mancano properties (3D, 4K, etc) */}
+        <label htmlFor="inputOv">
+          OV
+          <input
+            type="checkbox"
+            name="ov"
+            onChange={handleCheckOv}
+          />
+        </label>
+        <label htmlFor="inputFourK">
+          4K
+          <input
+            type="checkbox"
+            name="fourK"
+            onChange={handleCheckFourK}
+          />
+        </label>
+
+        <label htmlFor="inputDolby">
+          Dolby
+          <input
+            type="checkbox"
+            name="dolby"
+            onChange={handleCheckDolby}
+          />
+        </label>
+
+        </div>
+        <select onChange={(e) => setRating(e.target.value)}>
+          <option value="classificazione">
+            Classificazione
+          </option>
+          <option value="PERTUTTI">Per tutti</option>
+          <option value="VM14">VM14</option>
+          <option value="VM18">VM18</option>
+        </select>
+
 
         <Button variant="light" type="submit">
           Inserisci film

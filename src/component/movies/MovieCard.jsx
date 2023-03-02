@@ -3,6 +3,7 @@ import { NavLink, useLoaderData } from "react-router-dom";
 import FourK from "../../assets/symbols/4K.jpeg";
 import vm14 from "../../assets/symbols/vm14.png";
 import vm18 from "../../assets/symbols/vm18.png";
+import pertutti from "../../assets/symbols/pertutti.png"
 import Dolby from "../../assets/symbols/dolby-atmos.png";
 import "./moviecard.css";
 
@@ -17,6 +18,15 @@ export async function movieCardLoader({ params }) {
   return movie;
 }
 
+const rating = (rating) => {
+  if (rating == "PERTUTTI"){
+    return pertutti;
+  } else if (rating == "VM14"){
+    return vm14
+  } else if (rating == "VM18"){
+    return vm18
+  }
+}
 const MovieCard = () => {
   const movie = useLoaderData();
 
@@ -31,22 +41,8 @@ const MovieCard = () => {
         <p>Durata: {movie.duration} minuti</p>
         <p>Trama: {movie.plot}</p>
         <p>Info extra: </p>
-
-        {movie.vm14 && (
-          <img
-            className="symbols"
-            src={vm14}
-            alt="Film vietato ai minori di 14 anni"
-          />
-        )}
-
-        {movie.vm18 && (
-          <img
-            className="symbols"
-            src={vm18}
-            alt="Film vietato ai minori di 14 anni"
-          />
-        )}
+        <img className="symbols" src={rating(movie.rating)} alt={movie.rating} />
+      
         {movie.threeD && <strong className="h1">3D</strong>}
 
         {movie.fourK && (

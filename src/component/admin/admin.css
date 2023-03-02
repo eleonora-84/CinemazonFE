@@ -96,3 +96,8 @@ input, textarea{
 .adminBtn{
   margin: 10px;
 }
+
+.properties{
+  display: flex;
+  justify-content: space-evenly;
+}
