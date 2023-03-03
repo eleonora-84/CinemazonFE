@@ -101,3 +101,14 @@ input, textarea{
   display: flex;
   justify-content: space-evenly;
 }
+
+.mandatory{
+  font-family: "Diavlo";
+  margin: 30px 0 0 50px;
+}
+
+.notValid{
+  font-family: "Diavlo";
+  color:red;
+  margin: 30px 0 0 50px;
+}

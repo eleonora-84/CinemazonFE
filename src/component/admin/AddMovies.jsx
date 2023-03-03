@@ -13,6 +13,7 @@ const AddMovies = () => {
   const [fourK, setFourK] = useState(false);
   const [dolby, setDolby] = useState(false);
   const [rating, setRating] = useState("");
+  const [showError, setShowError] = useState (false);
 
   const [inserted, setInserted] = useState(false);
 
@@ -24,6 +25,15 @@ const AddMovies = () => {
     setMoviePoster("");
     setRating("classificazione");
   };
+const checkValues = () => {
+  if (title === "" || director === "" || duration == ""){
+    setShowError(true);
+    return false
+  } else {
+    setShowError(false)
+    return true
+  };
+}
 
   const handleCheckThreeD = (e) => {
     console.log(e);
@@ -48,8 +58,10 @@ const AddMovies = () => {
     setDolby(e.target.checked);
     console.log(dolby);
   };
+
   const handleAddMovie = (e) => {
     e.preventDefault();
+    if (!checkValues()) return;
     addMovie({
       title: title,
       director: director,
@@ -75,13 +87,16 @@ const AddMovies = () => {
       body: JSON.stringify(movie),
     })
       .then((result) => result.json())
+      .then(checkValues())
       .catch((err) => console.log(err));
   };
 
   return (
     <div>
+      <div className="mandatory">I campi contrassegnati da * sono obbligatori.</div>
+      {showError && <div className="notValid">Inserire tutti i campi obbligatori!</div>}
       <form className="addMoviesForm" onSubmit={handleAddMovie}>
-        <label htmlFor="inputTitle">Titolo: </label>
+        <label htmlFor="inputTitle">* Titolo: </label>
         <input
           value={title}
           onChange={(e) => {
@@ -92,7 +107,7 @@ const AddMovies = () => {
           placeholder="Titolo del film"
         />
 
-        <label htmlFor="inputDirector">Regia: </label>
+        <label htmlFor="inputDirector">* Regia: </label>
         <input
           value={director}
           onChange={(e) => {
@@ -103,7 +118,7 @@ const AddMovies = () => {
           placeholder="Regia"
         />
 
-        <label htmlFor="inputDuration">Durata: </label>
+        <label htmlFor="inputDuration">* Durata: </label>
         <input
           value={duration}
           onChange={(e) => {
