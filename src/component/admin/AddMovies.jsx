@@ -12,12 +12,14 @@ const AddMovies = () => {
   const [ov, setOv] = useState(false);
   const [fourK, setFourK] = useState(false);
   const [dolby, setDolby] = useState(false);
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState("PERTUTTI");
   const [showError, setShowError] = useState (false);
+  const [tempTitle, setTempTitle] = useState("");
 
   const [inserted, setInserted] = useState(false);
 
   const clearInputs = () => {
+    setTempTitle(title);
     setTitle("");
     setDirector("");
     setDuration("");
@@ -25,14 +27,15 @@ const AddMovies = () => {
     setMoviePoster("");
     setRating("classificazione");
   };
+  
 const checkValues = () => {
-  if (title === "" || director === "" || duration == ""){
+  if (title === "" || director === "" || duration === "" || plot === ""){
     setShowError(true);
     return false
   } else {
-    setShowError(false)
-    return true
-  };
+      setShowError(false);
+      return true;
+    }
 }
 
   const handleCheckThreeD = (e) => {
@@ -129,7 +132,7 @@ const checkValues = () => {
           placeholder="Durata in minuti"
         />
 
-        <label htmlFor="inputPlot">Trama: </label>
+        <label htmlFor="inputPlot">* Trama: </label>
         <textarea
           value={plot}
           onChange={(e) => {
@@ -189,7 +192,7 @@ const checkValues = () => {
         </label>
 
         </div>
-        <select onChange={(e) => setRating(e.target.value)}>
+        <select onChange={(e) => setRating(e.target.value)} >
           <option value="classificazione">
             Classificazione
           </option>
@@ -203,7 +206,7 @@ const checkValues = () => {
           Inserisci film
         </Button>
       </form>
-      {inserted && <div className="inserted">Film inserito con successo!</div>}
+      {inserted && <div className="inserted">Film {tempTitle} inserito con successo!</div>}
     </div>
   );
 };
