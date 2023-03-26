@@ -15,6 +15,7 @@ const AddMovies = () => {
   const [rating, setRating] = useState("PERTUTTI");
   const [showError, setShowError] = useState (false);
   const [tempTitle, setTempTitle] = useState("");
+  const [plotError, setPlotError] = useState(false);
 
   const [inserted, setInserted] = useState(false);
 
@@ -27,9 +28,21 @@ const AddMovies = () => {
     setMoviePoster("");
     setRating("classificazione");
   };
-  
+
+const checkPlot = () => {
+  if (plot.length>1 && plot.length<500){
+    console.log("trama OK");
+    setPlotError(false);
+    return true;
+  } else {
+    console.log("errore trama");
+    setPlotError(true);
+    return false;
+  }
+}
+
 const checkValues = () => {
-  if (title === "" || director === "" || duration === "" || plot === ""){
+  if (title === "" || director === "" || duration === ""){
     setShowError(true);
     return false
   } else {
@@ -64,7 +77,7 @@ const checkValues = () => {
 
   const handleAddMovie = (e) => {
     e.preventDefault();
-    if (!checkValues()) return;
+    if (!checkValues() || !checkPlot()) return;
     addMovie({
       title: title,
       director: director,
@@ -98,6 +111,7 @@ const checkValues = () => {
     <div>
       <div className="mandatory">I campi contrassegnati da * sono obbligatori.</div>
       {showError && <div className="notValid">Inserire tutti i campi obbligatori!</div>}
+      {plotError && <div className="notValid">Verifica i caratteri che compongono la trama</div>}
       <form className="addMoviesForm" onSubmit={handleAddMovie}>
         <label htmlFor="inputTitle">* Titolo: </label>
         <input
@@ -132,7 +146,7 @@ const checkValues = () => {
           placeholder="Durata in minuti"
         />
 
-        <label htmlFor="inputPlot">* Trama: </label>
+        <label htmlFor="inputPlot">* Trama (max 500 caratteri):</label>
         <textarea
           value={plot}
           onChange={(e) => {
@@ -141,7 +155,7 @@ const checkValues = () => {
           type="text"
           id="inputPlot"
           placeholder="Trama"
-          rows="3"
+          rows="4"
         />
 
         <label htmlFor="inputPoster">Locandina: </label>
